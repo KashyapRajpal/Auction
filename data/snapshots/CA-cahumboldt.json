@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "CA",
+    "slug": "cahumboldt",
+    "id": 1314
+  },
+  "fetched_at": "2026-05-01T11:22:13+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GovEase Auction Browser</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f2f5;color:#1f2937}
+a{color:#006AFF;text-decoration:none} a:hover{text-decoration:underline}
+
+.hdr{background:linear-gradient(135deg,#006AFF,#0044cc);color:#fff;padding:11px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 2px 12px rgba(0,0,0,.3);z-index:200;position:relative}
+.hdr h1{font-size:1.15rem;font-weight:800;letter-spacing:-.3px;margin-right:auto}
+.hdr h1 .sub{font-size:.7rem;font-weight:500;opacity:.75;margin-left:8px}
+.hdr-stats{display:flex;gap:20px}
+.hs{text-align:center}
+.hs-v{font-size:1.05rem;font-weight:800}
+.hs-l{font-size:.6rem;opacity:.75;text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
+
+.fbar{background:#fff;padding:10px 16px;display:flex;gap:12px;align-items:flex-end;
+  flex-wrap:wrap;border-bottom:1px solid #dde1e7;box-shadow:0 1px 5px rgba(0,0,0,.06)}
+.fg{display:flex;flex-direction:column;gap:3px}
+.fg label{font-size:.6rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px}
+select,input[type=text],input[type=number]{border:1px solid #d0d5dd;border-radius:7px;padding:6px 10px;
+  font-size:.82rem;background:#fff;font-family:inherit}
+select:focus,input:focus{outline:none;border-color:#006AFF;box-shadow:0 0 0 3px rgba(0,106,255,.12)}
+select{cursor:pointer}
+select option.no-data{color:#bbb}
+select option.empty-county{color:#bbb;font-style:italic}
+select option.enriched{font-weight:700;color:#0044cc}
+.btn{border:none;border-radius:7px;padding:6px 14px;cursor:pointer;font-size:.78rem;font-weight:700}
+.btn-primary{background:#006AFF;color:#fff}
+.btn-primary:hover{background:#0055cc}
+.btn-ghost{background:#f3f4f6;color:#555}
+.btn-ghost:hover{background:#e5e7eb}
+.rc{font-size:.75rem;color:#999;margin-left:auto;align-self:center;white-space:nowrap}
+
+.main{display:flex;height:calc(100vh - 110px)}
+.lp-wrap{width:430px;min-width:320px;display:flex;flex-direction:column;background:#f0f2f5;border-right:1px solid #dde1e7}
+.lp{flex:1;overflow-y:auto;padding:10px}
+.lp::-webkit-scrollbar{width:6px}
+.lp::-webkit-scrollbar-thumb{background:#c5c9d4;border-radius:3px}
+#map{flex:1;height:100%}
+
+/* Schedule banner — sits at the top of the cards column when schedule data exists */
+#schedule-banner:empty{display:none}
+.sched{margin:10px 10px 0;padding:12px 14px;border-radius:10px;
+  background:linear-gradient(135deg,#0f172a,#1e293b);color:#e2e8f0;
+  box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.sched .sched-h{font-size:.6rem;font-weight:800;color:#93c5fd;text-transform:uppercase;
+  letter-spacing:.55px;margin-bottom:6px}
+.sched .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
+.sched .cell{min-width:0}
+.sched .lbl{color:#94a3b8;font-size:.58rem;text-transform:uppercase;letter-spacing:.5px;
+  font-weight:700;margin-bottom:1px}
+.sched .val{font-size:.85rem;font-weight:700;color:#fff;line-height:1.25}
+.sched .sub{font-size:.7rem;color:#cbd5e1;margin-top:1px}
+.sched .countdown{display:inline-block;font-size:.6rem;font-weight:800;padding:2px 7px;
+  border-radius:10px;background:#1e40af;color:#dbeafe;margin-left:6px;letter-spacing:.3px;text-transform:uppercase}
+.sched .countdown.soon{background:#b91c1c;color:#fee2e2}
+.sched .countdown.past{background:#475569;color:#cbd5e1}
+.sched .sale-type{display:inline-block;font-size:.6rem;font-weight:700;padding:2px 7px;
+  border-radius:4px;background:rgba(147,197,253,.15);color:#bfdbfe;letter-spacing:.3px;
+  text-transform:uppercase;margin-top:6px}
+
+.empty{padding:60px 24px;text-align:center;color:#666}
+.empty h2{font-size:1.05rem;margin-bottom:8px;color:#1f2937}
+.empty code{display:block;background:#1e293b;color:#e2e8f0;padding:10px 14px;border-radius:8px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;margin:14px auto;max-width:90%;text-align:left}
+
+.card{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,.05);cursor:pointer;border:1px solid transparent;transition:.12s}
+.card:hover{border-color:#006AFF;box-shadow:0 2px 10px rgba(0,106,255,.12)}
+.card.active{border-color:#006AFF;background:#eff6ff}
+
+/* Tiny uppercase label that sits above any value in a card. */
+.card .lbl{color:#9ca3af;font-size:.58rem;text-transform:uppercase;
+  letter-spacing:.5px;font-weight:700;margin-bottom:2px;line-height:1.2}
+
+/* Header section: parcel # + face value */
+.card .sec-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
+  padding-bottom:8px;border-bottom:1px solid #f0f2f5}
+.card .head-left{min-width:0;flex:1}
+.card .head-right{text-align:right;flex-shrink:0}
+.card .head-right .lbl{text-align:right}
+.card .pn{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;color:#374151;
+  word-break:break-all;line-height:1.3;font-weight:600}
+.card .fv{font-size:1.05rem;font-weight:800;color:#0044cc;white-space:nowrap;line-height:1.1}
+
+/* Identity section: owner + address — wrap on overflow, max 2 lines */
+.card .sec-ident{padding:8px 0}
+.card .sec-ident .ident-row + .ident-row{margin-top:6px}
+.card .ow{font-size:.82rem;color:#1f2937;font-weight:600;line-height:1.3;
+  display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;word-break:break-word}
+.card .ad{font-size:.74rem;color:#374151;line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;word-break:break-word}
+
+/* Metrics section: equal-width grid so all cards align vertically */
+.card .sec-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  padding-top:8px;border-top:1px solid #f0f2f5}
+.card .sec-metrics .cell{min-width:0}
+.card .sec-metrics .val{font-size:.78rem;font-weight:600;color:#1f2937;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+#detail{position:fixed;top:0;right:-440px;width:430px;height:100vh;background:#fff;
+  box-shadow:-4px 0 20px rgba(0,0,0,.18);z-index:500;overflow-y:auto;transition:right .25s}
+#detail.open{right:0}
+#detail .hd{padding:14px 18px;background:#0044cc;color:#fff;display:flex;justify-content:space-between;align-items:center}
+#detail .hd .x{cursor:pointer;font-size:1.4rem;line-height:1;background:none;border:none;color:#fff}
+#detail .body{padding:16px 18px}
+#detail .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f2f5;
+  font-size:.84rem;gap:10px}
+#detail .row .lbl{color:#666;font-weight:600;flex-shrink:0}
+#detail .row .val{color:#1f2937;text-align:right}
+#detail .legal{font-size:.78rem;color:#444;line-height:1.5;background:#f9fafb;padding:10px;border-radius:8px;margin-top:6px}
+#detail .actions{margin-top:18px;display:flex;gap:8px}
+#detail .sec-h{font-size:.62rem;font-weight:800;color:#666;text-transform:uppercase;letter-spacing:.5px;margin:14px 0 4px;padding-bottom:4px;border-bottom:1px solid #f0f2f5}
+#detail .sec-h:first-child{margin-top:0}
+
+.pill{display:inline-block;padding:1px 7px;border-radius:10px;font-size:.62rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.4px;background:#dbeafe;color:#1e40af;margin-left:6px}
+
+#status{position:fixed;bottom:14px;left:14px;background:#1e293b;color:#fff;padding:8px 14px;
+  border-radius:8px;font-size:.78rem;box-shadow:0 4px 12px rgba(0,0,0,.2);opacity:0;
+  transition:opacity .2s;z-index:600;pointer-events:none}
+#status.show{opacity:1}
+
+.legend{background:#fff;padding:8px 11px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,.15);font-size:.7rem;line-height:1.6}
+.legend .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>GovEase Auctions <span class="sub">tax-lien & tax-deed parcels, Zillow-style</span></h1>
+  <div class="hdr-stats">
+    <div class="hs"><div class="hs-v" id="stat-county">—</div><div class="hs-l">County</div></div>
+    <div class="hs"><div class="hs-v" id="stat-total">—</div><div class="hs-l">Parcels</div></div>
+    <div class="hs"><div class="hs-v" id="stat-mapped">—</div><div class="hs-l">On Map</div></div>
+    <div class="hs"><div class="hs-v" id="stat-enriched">—</div><div class="hs-l">Enriched / 113</div></div>
+    <div class="hs"><div class="hs-v" id="stat-fetched">—</div><div class="hs-l">Updated</div></div>
+  </div>
+</div>
+
+<div class="fbar">
+  <div class="fg">
+    <label for="county">County</label>
+    <select id="county" style="min-width:240px"></select>
+  </div>
+  <div class="fg">
+    <label for="search">Search owner / parcel</label>
+    <input type="text" id="search" placeholder="e.g. SMITH or 30 02 04" style="width:200px">
+  </div>
+  <div class="fg">
+    <label for="min-fv">Face value min</label>
+    <input type="number" id="min-fv" placeholder="0" style="width:90px">
+  </div>
+  <div class="fg">
+    <label for="max-fv">Face value max</label>
+    <input type="number" id="max-fv" placeholder="∞" style="width:90px">
+  </div>
+  <div class="fg">
+    <label for="sort">Sort</label>
+    <select id="sort">
+      <option value="fv-desc">Face value ↓</option>
+      <option value="fv-asc">Face value ↑</option>
+      <option value="tv-desc">True value ↓</option>
+      <option value="parcel">Parcel #</option>
+      <option value="owner">Owner A→Z</option>
+    </select>
+  </div>
+  <button class="btn btn-ghost" id="reset">Reset</button>
+  <div class="rc" id="rc">— shown</div>
+</div>
+
+<div class="main">
+  <div class="lp-wrap">
+    <div id="schedule-banner"></div>
+    <div class="lp" id="lp"></div>
+  </div>
+  <div id="map"></div>
+</div>
+
+<aside id="detail">
+  <div class="hd">
+    <div><strong id="d-pn">—</strong></div>
+    <button class="x" onclick="closeDetail()">×</button>
+  </div>
+  <div class="body" id="d-body"></div>
+</aside>
+
+<div id="status"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+const STATE = { counties: [], snapshots: {}, current: null, parcels: [], filtered: [], activeId: null, schedule: new Map() };
+
+const $ = id => document.getElementById(id);
+const fmtMoney = n => n == null ? '—' : '$' + n.toLocaleString(undefined, {maximumFractionDigits:0});
+const fmtDate  = s => { if (!s) return '—'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleDateString(); };
+const fmtDateLong = s => { if (!s) return null; const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString(undefined, {month:'short', day:'numeric', year:'numeric'}); };
+const fmtTime12 = s => { if (!s) return null; const [h,m] = s.split(':').map(Number); const ap = h >= 12 ? 'PM' : 'AM'; const h12 = h%12 || 12; return `${h12}:${String(m).padStart(2,'0')} ${ap}`; };
+const daysUntil = s => { if (!s) return null; const today = new Date(); today.setHours(0,0,0,0); const d = new Date(s + 'T12:00:00'); return Math.round((d - today) / 86400000); };
+const escHtml  = s => (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const status = (msg, ms=2000) => { const el = $('status'); el.textContent = msg; el.classList.add('show');
+  clearTimeout(status._t); if (ms) status._t = setTimeout(() => el.classList.remove('show'), ms); };
+
+// ── Map ──────────────────────────────────────────────────────────────────────
+const map = L.map('map', { preferCanvas: true }).setView([39.5, -98.35], 4);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://carto.com/attributions">CARTO</a> © OpenStreetMap',
+  subdomains: 'abcd', maxZoom: 19
+}).addTo(map);
+const cluster = L.markerClusterGroup({ maxClusterRadius: 55, disableClusteringAtZoom: 15 });
+map.addLayer(cluster);
+const polygonLayer = L.layerGroup().addTo(map);
+const polyById = new Map();
+
+const legend = L.control({ position: 'bottomright' });
+legend.onAdd = () => {
+  const d = L.DomUtil.create('div', 'legend');
+  d.innerHTML = `<strong>Face value</strong>
+    <div><span class="dot" style="background:#16a34a"></span>&lt; $500</div>
+    <div><span class="dot" style="background:#f59e0b"></span>$500–$5k</div>
+    <div><span class="dot" style="background:#ef4444"></span>&gt; $5k</div>`;
+  return d;
+};
+legend.addTo(map);
+
+const colorFor = fv => fv == null ? '#94a3b8' : fv < 500 ? '#16a34a' : fv < 5000 ? '#f59e0b' : '#ef4444';
+
+// ── Data load ────────────────────────────────────────────────────────────────
+async function loadCounties() {
+  const [counties, manifest, schedule] = await Promise.all([
+    fetch('data/counties.json?t=' + Date.now()).then(r => r.json()),
+    fetch('data/manifest.json?t=' + Date.now()).then(r => r.json()).catch(() => ({ snapshots: [] })),
+    fetch('data/auction-schedule.json?t=' + Date.now()).then(r => r.json()).catch(() => ({ auctions: [] })),
+  ]);
+  const haveSnap = new Map(manifest.snapshots.map(s => [s.id, s]));
+  STATE.schedule = new Map(schedule.auctions.filter(a => a.county_id).map(a => [a.county_id, a]));
+  STATE.counties = counties.counties.map(c => ({
+    ...c,
+    snapshot: haveSnap.get(c.id),
+    schedule: STATE.schedule.get(c.id),
+  }));
+  $('stat-enriched').textContent = manifest.snapshots.filter(s => s.enriched).length;
+  populateDropdown();
+  // Auto-select the first ENRICHED county; fall back to any with parcels;
+  // fall back to anything with a snapshot.
+  const first = STATE.counties.find(c => c.snapshot?.enriched && c.snapshot.parcel_count > 0)
+             || STATE.counties.find(c => c.snapshot?.parcel_count > 0)
+             || STATE.counties.find(c => c.snapshot);
+  if (first) {
+    $('county').value = first.id;
+    await selectCounty(first.id);
+  } else {
+    renderEmpty();
+  }
+}
+
+function populateDropdown() {
+  const sel = $('county');
+  sel.innerHTML = '';
+  const byState = {};
+  for (const c of STATE.counties) (byState[c.state] = byState[c.state] || []).push(c);
+  // Sort states with most-enriched first
+  const stateScore = st => byState[st].reduce((a,c) => a + (c.snapshot?.enriched ? 100 : c.snapshot?.parcel_count > 0 ? 1 : 0), 0);
+  const sortedStates = Object.keys(byState).sort((a,b) => stateScore(b) - stateScore(a) || a.localeCompare(b));
+  for (const st of sortedStates) {
+    const og = document.createElement('optgroup');
+    og.label = st;
+    for (const c of byState[st]) {
+      const o = document.createElement('option');
+      o.value = c.id;
+      const snap = c.snapshot;
+      let suffix = '';
+      if (!snap) {
+        suffix = ' · no data';
+        o.classList.add('no-data');
+      } else if (snap.parcel_count === 0) {
+        suffix = ' · 0 parcels';
+        o.classList.add('empty-county');
+      } else if (snap.enriched) {
+        suffix = ` · ${snap.parcel_count} ★`;
+        o.classList.add('enriched');
+      } else {
+        suffix = ` · ${snap.parcel_count} (basic)`;
+      }
+      // Append sale-date hint when we have it
+      if (c.schedule?.sale_date) {
+        const days = daysUntil(c.schedule.sale_date);
+        const tag = days >= 0 ? ` · sale in ${days}d` : ` · ended`;
+        suffix += tag;
+      }
+      o.textContent = c.name + suffix;
+      og.appendChild(o);
+    }
+    sel.appendChild(og);
+  }
+}
+
+async function selectCounty(id) {
+  const c = STATE.counties.find(x => x.id == id);
+  if (!c) return;
+  STATE.current = c;
+  renderScheduleBanner(c);
+  if (!c.snapshot) {
+    renderEmpty();
+    return;
+  }
+  status(`Loading ${c.label}…`, 0);
+  const snap = await fetch(`data/snapshots/${c.snapshot.file}`).then(r => r.json());
+  STATE.parcels = snap.parcels || [];
+  $('stat-county').textContent = c.label;
+  $('stat-total').textContent = STATE.parcels.length;
+  $('stat-fetched').textContent = fmtDate(snap.fetched_at);
+  applyFilters();
+  status(`Loaded ${STATE.parcels.length} parcels`);
+}
+
+function renderScheduleBanner(c) {
+  const s = c.schedule;
+  const el = $('schedule-banner');
+  if (!s) { el.innerHTML = ''; return; }
+  const sd = daysUntil(s.sale_date);
+  const rd = daysUntil(s.registration_date);
+  const cdClass = sd == null ? '' : sd < 0 ? 'past' : sd <= 7 ? 'soon' : '';
+  const cdText  = sd == null ? '' : sd < 0 ? 'past' : sd === 0 ? 'today' : sd === 1 ? 'tomorrow' : `in ${sd}d`;
+  const regCdClass = rd == null ? '' : rd < 0 ? 'past' : rd <= 3 ? 'soon' : '';
+  const regCdText  = rd == null ? '' : rd < 0 ? 'closed' : rd === 0 ? 'today' : `${rd}d left`;
+  const saleTime = s.sale_time_ct ? `${fmtTime12(s.sale_time_ct)} CT` : '';
+  const preBid = s.pre_bidding_date
+    ? `Pre-bid opens ${fmtDateLong(s.pre_bidding_date)}${s.pre_bidding_time_ct ? ' · ' + fmtTime12(s.pre_bidding_time_ct) + ' CT' : ''}`
+    : null;
+  el.innerHTML = `
+    <div class="sched">
+      <div class="sched-h">Auction schedule${s.city ? ' · ' + escHtml(s.city) : ''}</div>
+      <div class="sched-grid">
+        <div class="cell">
+          <div class="lbl">Sale date</div>
+          <div class="val">${fmtDateLong(s.sale_date) || '—'}${cdText ? `<span class="countdown ${cdClass}">${cdText}</span>` : ''}</div>
+          ${saleTime ? `<div class="sub">${saleTime}</div>` : ''}
+        </div>
+        <div class="cell">
+          <div class="lbl">Registration deadline</div>
+          <div class="val">${fmtDateLong(s.registration_date) || '—'}${regCdText ? `<span class="countdown ${regCdClass}">${regCdText}</span>` : ''}</div>
+          ${preBid ? `<div class="sub">${escHtml(preBid)}</div>` : ''}
+        </div>
+      </div>
+      <div class="sale-type">${escHtml(s.sale_type || '')}</div>
+    </div>`;
+}
+
+// ── Filters / sort / render ──────────────────────────────────────────────────
+function applyFilters() {
+  const q = $('search').value.trim().toLowerCase();
+  const minFv = parseFloat($('min-fv').value) || 0;
+  const maxFv = parseFloat($('max-fv').value) || Infinity;
+  const sort = $('sort').value;
+
+  let arr = STATE.parcels.filter(p => {
+    if (p.face_value != null && (p.face_value < minFv || p.face_value > maxFv)) return false;
+    if (q) {
+      const hay = [p.owner, p.parcel_number, p.physical_address, p.list_address].filter(Boolean).join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  arr.sort((a, b) => {
+    switch (sort) {
+      case 'fv-desc': return (b.face_value ?? -1) - (a.face_value ?? -1);
+      case 'fv-asc':  return (a.face_value ?? Infinity) - (b.face_value ?? Infinity);
+      case 'tv-desc': return (b.true_value ?? -1) - (a.true_value ?? -1);
+      case 'parcel':  return (a.parcel_number || '').localeCompare(b.parcel_number || '');
+      case 'owner':   return (a.owner || '').localeCompare(b.owner || '');
+    }
+  });
+
+  STATE.filtered = arr;
+  $('rc').textContent = `${arr.length} of ${STATE.parcels.length} shown`;
+  renderCards();
+  renderMarkers();
+}
+
+function renderEmpty() {
+  $('lp').innerHTML = `
+    <div class="empty">
+      <h2>No data for this county yet</h2>
+      <p>Snapshots are built by the scraper. Run it to populate this county:</p>
+      <code>python src/scrape.py county ${STATE.current?.state || 'AL'} ${STATE.current?.slug || 'albarbour'} ${STATE.current?.id || 1262}</code>
+      <p style="font-size:.8rem;color:#888">Then refresh this page.</p>
+    </div>`;
+  $('stat-county').textContent = STATE.current?.label || '—';
+  $('stat-total').textContent = '—';
+  $('stat-mapped').textContent = '—';
+  $('stat-fetched').textContent = '—';
+  $('rc').textContent = '— shown';
+  cluster.clearLayers();
+}
+
+function renderCards() {
+  const lp = $('lp');
+  if (STATE.filtered.length === 0) {
+    lp.innerHTML = `<div class="empty"><h2>No parcels match</h2><p>Try clearing filters.</p></div>`;
+    return;
+  }
+  const slice = STATE.filtered.slice(0, 200); // cap render for big counties
+  lp.innerHTML = slice.map(p => {
+    const addr = p.physical_address || p.list_address || '';
+    const metrics = [
+      ['True value', fmtMoney(p.true_value), p.true_value != null],
+      ['Assessed',   fmtMoney(p.assessed_value), p.assessed_value != null],
+      ['Tax year',   p.tax_year || '', p.tax_year != null],
+    ];
+    const hasMetrics = metrics.some(([, , show]) => show);
+    return `
+    <div class="card" data-id="${p.lot_id}" onclick="openDetail(${p.lot_id})">
+      <div class="sec-head">
+        <div class="head-left">
+          <div class="lbl">Parcel #</div>
+          <div class="pn">${escHtml(p.parcel_number)}</div>
+        </div>
+        <div class="head-right">
+          <div class="lbl">Face value</div>
+          <div class="fv">${fmtMoney(p.face_value)}</div>
+        </div>
+      </div>
+      <div class="sec-ident">
+        <div class="ident-row">
+          <div class="lbl">Owner</div>
+          <div class="ow">${escHtml(p.owner || '—')}</div>
+        </div>
+        ${addr ? `<div class="ident-row">
+          <div class="lbl">Property address</div>
+          <div class="ad">📍 ${escHtml(addr)}</div>
+        </div>` : ''}
+      </div>
+      ${hasMetrics ? `<div class="sec-metrics">
+        ${metrics.map(([lbl, val, show]) => show
+          ? `<div class="cell"><div class="lbl">${lbl}</div><div class="val" title="${escHtml(val)}">${escHtml(val)}</div></div>`
+          : `<div class="cell"></div>`
+        ).join('')}
+      </div>` : ''}
+    </div>`;
+  }).join('') + (STATE.filtered.length > 200
+    ? `<div style="text-align:center;padding:14px;color:#888;font-size:.78rem">Showing first 200 of ${STATE.filtered.length}. Refine filters to narrow.</div>`
+    : '');
+}
+
+function renderMarkers() {
+  cluster.clearLayers();
+  polygonLayer.clearLayers();
+  polyById.clear();
+  let mapped = 0;
+  for (const p of STATE.filtered) {
+    if (p.lat == null || p.lng == null) continue;
+    mapped++;
+    const color = colorFor(p.face_value);
+
+    // Parcel boundary (when shape API returned one). GovEase coords are [lng, lat]
+    // — Leaflet wants [lat, lng].
+    if (p.polygon && Array.isArray(p.polygon)) {
+      const rings = p.polygon.map(ring => ring.map(([lng, lat]) => [lat, lng]));
+      const poly = L.polygon(rings, {
+        color: color, weight: 1.4, fillOpacity: .15, opacity: .8
+      });
+      poly.bindTooltip(`${escHtml(p.parcel_number)} · ${fmtMoney(p.face_value)}`,
+                       { sticky: true });
+      poly.on('click', () => openDetail(p.lot_id));
+      polygonLayer.addLayer(poly);
+      polyById.set(p.lot_id, poly);
+    }
+
+    const m = L.circleMarker([p.lat, p.lng], {
+      radius: 7, fillColor: color, color: '#fff',
+      weight: 1.5, fillOpacity: .9
+    });
+    m.bindPopup(`<strong>${escHtml(p.parcel_number)}</strong><br>${fmtMoney(p.face_value)}<br>${escHtml(p.owner || '')}`);
+    m.on('click', () => openDetail(p.lot_id));
+    cluster.addLayer(m);
+  }
+  $('stat-mapped').textContent = mapped;
+  if (mapped > 0 && STATE.current) {
+    const bounds = cluster.getBounds();
+    if (bounds.isValid()) map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+  } else {
+    map.setView([39.5, -98.35], 4);
+  }
+}
+
+function openDetail(lotId) {
+  const p = STATE.parcels.find(x => x.lot_id === lotId);
+  if (!p) return;
+  STATE.activeId = lotId;
+  document.querySelectorAll('.card').forEach(el => el.classList.toggle('active', +el.dataset.id === lotId));
+
+  $('d-pn').textContent = p.parcel_number || '—';
+  const govURL = STATE.current
+    ? `https://liveauctions.govease.com/${STATE.current.state.toLowerCase()}/${STATE.current.slug}/${STATE.current.id}/openbidownparcel/${p.lot_id}/${p.parcel_slug}`
+    : '#';
+
+  const mailingParts = [p.mailing_street, p.mailing_city, p.mailing_state, p.mailing_zip]
+    .filter(Boolean).join(', ');
+
+  const sched = STATE.current?.schedule;
+  const sections = [
+    { title: 'Auction', rows: [
+      ['Auction',         p.auction_name],
+      ['Type',            p.auction_type || sched?.sale_type],
+      ['Sale date',       fmtDateLong(sched?.sale_date)],
+      ['Sale time',       sched?.sale_time_ct ? `${fmtTime12(sched.sale_time_ct)} CT` : null],
+      ['Registration deadline', fmtDateLong(sched?.registration_date)],
+      ['Face value',      fmtMoney(p.face_value)],
+      ['Tax year',        p.tax_year],
+      ['Unique #',        p.unique_number],
+    ]},
+    { title: 'Property', rows: [
+      ['Owner',           p.owner || p.primary_owner],
+      ['Physical addr',   p.physical_address || p.list_address],
+      ['Total true value', fmtMoney(p.true_value)],
+      ['True land',       fmtMoney(p.true_land)],
+      ['True building',   fmtMoney(p.true_building)],
+      ['Assessed value',  fmtMoney(p.assessed_value)],
+    ]},
+    { title: 'Owner of record', rows: [
+      ['Mailing addr',    mailingParts],
+    ]},
+  ];
+
+  const html = sections.map(sec => {
+    const rows = sec.rows.filter(([, v]) => v != null && v !== '' && v !== '—');
+    if (!rows.length) return '';
+    return `<div class="sec-h">${sec.title}</div>` + rows.map(([k, v]) =>
+      `<div class="row"><div class="lbl">${k}</div><div class="val">${escHtml(v)}</div></div>`
+    ).join('');
+  }).join('') + (p.legal_description ? `
+    <div class="sec-h">Legal description</div>
+    <div class="legal">${escHtml(p.legal_description)}</div>` : '') + `
+    <div class="actions">
+      <a class="btn btn-primary" href="${govURL}" target="_blank" rel="noopener">Open on GovEase ↗</a>
+    </div>`;
+
+  $('d-body').innerHTML = html;
+  $('detail').classList.add('open');
+
+  // Highlight this parcel's polygon if we have one
+  for (const [id, poly] of polyById.entries()) {
+    poly.setStyle({ weight: id === lotId ? 3 : 1.4, fillOpacity: id === lotId ? .35 : .15 });
+  }
+  if (p.lat != null && p.lng != null) {
+    map.flyTo([p.lat, p.lng], 17, { duration: .6 });
+  }
+}
+
+function closeDetail() {
+  $('detail').classList.remove('open');
+  STATE.activeId = null;
+  document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
+  for (const poly of polyById.values()) {
+    poly.setStyle({ weight: 1.4, fillOpacity: .15 });
+  }
+}
+
+// ── Wire up ──────────────────────────────────────────────────────────────────
+$('county').addEventListener('change', e => selectCounty(e.target.value));
+['search', 'min-fv', 'max-fv', 'sort'].forEach(id => $(id).addEventListener('input', applyFilters));
+$('reset').addEventListener('click', () => {
+  $('search').value = ''; $('min-fv').value = ''; $('max-fv').value = ''; $('sort').value = 'fv-desc';
+  applyFilters();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+loadCounties().catch(err => {
+  console.error(err);
+  $('lp').innerHTML = `<div class="empty"><h2>Failed to load counties.json</h2>
+    <p>Run <code>python src/scrape.py counties</code> first.</p></div>`;
+});
+</script>
+</body>
+</html>

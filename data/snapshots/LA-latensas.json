@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "LA",
+    "slug": "latensas",
+    "id": 1496
+  },
+  "fetched_at": "2026-05-01T13:33:41+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

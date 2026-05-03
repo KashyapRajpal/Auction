@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "TX",
+    "slug": "txgrayson",
+    "id": 1280
+  },
+  "fetched_at": "2026-05-01T12:36:46+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

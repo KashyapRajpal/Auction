@@ -1,0 +1,910 @@
+{
+  "fetched_at": "2026-05-01T06:59:27+00:00",
+  "count": 113,
+  "counties": [
+    {
+      "state": "AL",
+      "slug": "albaldwin",
+      "id": 1101,
+      "name": "Baldwin",
+      "label": "AL - Baldwin",
+      "snapshot": "AL-albaldwin.json"
+    },
+    {
+      "state": "AL",
+      "slug": "albarbour",
+      "id": 1262,
+      "name": "Barbour",
+      "label": "AL - Barbour",
+      "snapshot": "AL-albarbour.json"
+    },
+    {
+      "state": "AL",
+      "slug": "albibb",
+      "id": 1334,
+      "name": "Bibb",
+      "label": "AL - Bibb",
+      "snapshot": "AL-albibb.json"
+    },
+    {
+      "state": "AL",
+      "slug": "albutler",
+      "id": 1264,
+      "name": "Butler",
+      "label": "AL - Butler",
+      "snapshot": "AL-albutler.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alcalhoun",
+      "id": 1216,
+      "name": "Calhoun",
+      "label": "AL - Calhoun",
+      "snapshot": "AL-alcalhoun.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alcherokee",
+      "id": 1220,
+      "name": "Cherokee",
+      "label": "AL - Cherokee",
+      "snapshot": "AL-alcherokee.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alcolbert",
+      "id": 1252,
+      "name": "Colbert",
+      "label": "AL - Colbert",
+      "snapshot": "AL-alcolbert.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alconecuh",
+      "id": 1250,
+      "name": "Conecuh",
+      "label": "AL - Conecuh",
+      "snapshot": "AL-alconecuh.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alcovington",
+      "id": 1359,
+      "name": "Covington",
+      "label": "AL - Covington",
+      "snapshot": "AL-alcovington.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aldale",
+      "id": 1251,
+      "name": "Dale",
+      "label": "AL - Dale",
+      "snapshot": "AL-aldale.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aldallas",
+      "id": 1333,
+      "name": "Dallas",
+      "label": "AL - Dallas",
+      "snapshot": "AL-aldallas.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aldekalb",
+      "id": 1219,
+      "name": "DeKalb",
+      "label": "AL - DeKalb",
+      "snapshot": "AL-aldekalb.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alelmore",
+      "id": 1210,
+      "name": "Elmore",
+      "label": "AL - Elmore",
+      "snapshot": "AL-alelmore.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alescambia",
+      "id": 1263,
+      "name": "Escambia",
+      "label": "AL - Escambia",
+      "snapshot": "AL-alescambia.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aletowah",
+      "id": 1258,
+      "name": "Etowah",
+      "label": "AL - Etowah",
+      "snapshot": "AL-aletowah.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alfranklin",
+      "id": 1265,
+      "name": "Franklin",
+      "label": "AL - Franklin",
+      "snapshot": "AL-alfranklin.json"
+    },
+    {
+      "state": "AL",
+      "slug": "algeneva",
+      "id": 1362,
+      "name": "Geneva",
+      "label": "AL - Geneva",
+      "snapshot": "AL-algeneva.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alhale",
+      "id": 1309,
+      "name": "Hale",
+      "label": "AL - Hale",
+      "snapshot": "AL-alhale.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alhenry",
+      "id": 1335,
+      "name": "Henry",
+      "label": "AL - Henry",
+      "snapshot": "AL-alhenry.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alhouston",
+      "id": 1475,
+      "name": "Houston",
+      "label": "AL - Houston",
+      "snapshot": "AL-alhouston.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aljackson",
+      "id": 1215,
+      "name": "Jackson",
+      "label": "AL - Jackson",
+      "snapshot": "AL-aljackson.json"
+    },
+    {
+      "state": "AL",
+      "slug": "aljeffersonbessemer",
+      "id": 1312,
+      "name": "Jefferson (Bessemer)",
+      "label": "AL - Jefferson (Bessemer)",
+      "snapshot": "AL-aljeffersonbessemer.json"
+    },
+    {
+      "state": "AL",
+      "slug": "allamar",
+      "id": 1269,
+      "name": "Lamar",
+      "label": "AL - Lamar",
+      "snapshot": "AL-allamar.json"
+    },
+    {
+      "state": "AL",
+      "slug": "allauderdale",
+      "id": 1310,
+      "name": "Lauderdale",
+      "label": "AL - Lauderdale",
+      "snapshot": "AL-allauderdale.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almacon",
+      "id": 1254,
+      "name": "Macon",
+      "label": "AL - Macon",
+      "snapshot": "AL-almacon.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almadison",
+      "id": 1308,
+      "name": "Madison",
+      "label": "AL - Madison",
+      "snapshot": "AL-almadison.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almarengo",
+      "id": 1256,
+      "name": "Marengo",
+      "label": "AL - Marengo",
+      "snapshot": "AL-almarengo.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almarion",
+      "id": 1363,
+      "name": "Marion",
+      "label": "AL - Marion",
+      "snapshot": "AL-almarion.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almobile",
+      "id": 1209,
+      "name": "Mobile",
+      "label": "AL - Mobile",
+      "snapshot": "AL-almobile.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almonroe",
+      "id": 1259,
+      "name": "Monroe",
+      "label": "AL - Monroe",
+      "snapshot": "AL-almonroe.json"
+    },
+    {
+      "state": "AL",
+      "slug": "almorgan",
+      "id": 1261,
+      "name": "Morgan",
+      "label": "AL - Morgan",
+      "snapshot": "AL-almorgan.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alpike",
+      "id": 1267,
+      "name": "Pike",
+      "label": "AL - Pike",
+      "snapshot": "AL-alpike.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alrandolph",
+      "id": 1274,
+      "name": "Randolph",
+      "label": "AL - Randolph",
+      "snapshot": "AL-alrandolph.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alshelby",
+      "id": 1211,
+      "name": "Shelby",
+      "label": "AL - Shelby",
+      "snapshot": "AL-alshelby.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alstclair",
+      "id": 1260,
+      "name": "St. Clair",
+      "label": "AL - St. Clair",
+      "snapshot": "AL-alstclair.json"
+    },
+    {
+      "state": "AL",
+      "slug": "altalladega",
+      "id": 1217,
+      "name": "Talladega",
+      "label": "AL - Talladega",
+      "snapshot": "AL-altalladega.json"
+    },
+    {
+      "state": "AL",
+      "slug": "altallapoosa",
+      "id": 1257,
+      "name": "Tallapoosa",
+      "label": "AL - Tallapoosa",
+      "snapshot": "AL-altallapoosa.json"
+    },
+    {
+      "state": "AL",
+      "slug": "altuscaloosa",
+      "id": 1253,
+      "name": "Tuscaloosa",
+      "label": "AL - Tuscaloosa",
+      "snapshot": "AL-altuscaloosa.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alwalker",
+      "id": 1255,
+      "name": "Walker",
+      "label": "AL - Walker",
+      "snapshot": "AL-alwalker.json"
+    },
+    {
+      "state": "AL",
+      "slug": "alwinstin",
+      "id": 1307,
+      "name": "Winston",
+      "label": "AL - Winston",
+      "snapshot": "AL-alwinstin.json"
+    },
+    {
+      "state": "AZ",
+      "slug": "azcochise",
+      "id": 1242,
+      "name": "Cochise",
+      "label": "AZ - Cochise",
+      "snapshot": "AZ-azcochise.json"
+    },
+    {
+      "state": "CA",
+      "slug": "cadelnorte",
+      "id": 1366,
+      "name": "Del Norte",
+      "label": "CA - Del Norte",
+      "snapshot": "CA-cadelnorte.json"
+    },
+    {
+      "state": "CA",
+      "slug": "cahumboldt",
+      "id": 1314,
+      "name": "Humboldt",
+      "label": "CA - Humboldt",
+      "snapshot": "CA-cahumboldt.json"
+    },
+    {
+      "state": "CA",
+      "slug": "calake",
+      "id": 1440,
+      "name": "Lake",
+      "label": "CA - Lake",
+      "snapshot": "CA-calake.json"
+    },
+    {
+      "state": "CA",
+      "slug": "calosangeles",
+      "id": 1391,
+      "name": "Los Angeles",
+      "label": "CA - Los Angeles",
+      "snapshot": "CA-calosangeles.json"
+    },
+    {
+      "state": "CO",
+      "slug": "coalamosatread",
+      "id": 1401,
+      "name": "Alamosa County Treasurer Deed",
+      "label": "CO - Alamosa County Treasurer Deed",
+      "snapshot": "CO-coalamosatread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cocostillalandsale",
+      "id": 1469,
+      "name": "Costilla County Land Sale",
+      "label": "CO - Costilla County Land Sale",
+      "snapshot": "CO-cocostillalandsale.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cocostillatread",
+      "id": 1435,
+      "name": "Costilla County Treasurer's Deed",
+      "label": "CO - Costilla County Treasurer's Deed",
+      "snapshot": "CO-cocostillatread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "codouglastread",
+      "id": 1479,
+      "name": "Douglas County Treasurer's Deed",
+      "label": "CO - Douglas County Treasurer's Deed",
+      "snapshot": "CO-codouglastread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "codouglasforeclosure",
+      "id": 1400,
+      "name": "Douglas Foreclosure",
+      "label": "CO - Douglas Foreclosure",
+      "snapshot": "CO-codouglasforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cogarfieldtread",
+      "id": 1420,
+      "name": "Garfield County Treasurer's Deed",
+      "label": "CO - Garfield County Treasurer's Deed",
+      "snapshot": "CO-cogarfieldtread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cogarfieldforeclosure",
+      "id": 1324,
+      "name": "Garfield Foreclosure",
+      "label": "CO - Garfield Foreclosure",
+      "snapshot": "CO-cogarfieldforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cojeffersonforeclosure",
+      "id": 1281,
+      "name": "Jefferson Foreclosure",
+      "label": "CO - Jefferson Foreclosure",
+      "snapshot": "CO-cojeffersonforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "colarimertread",
+      "id": 1452,
+      "name": "Larimer County Treasurer's Deed",
+      "label": "CO - Larimer County Treasurer's Deed",
+      "snapshot": "CO-colarimertread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "coparktread",
+      "id": 1438,
+      "name": "Park County Treasurer's Deed",
+      "label": "CO - Park County Treasurer's Deed",
+      "snapshot": "CO-coparktread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "coparkforeclosure",
+      "id": 1322,
+      "name": "Park Foreclosure",
+      "label": "CO - Park Foreclosure",
+      "snapshot": "CO-coparkforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "copitkinforeclosure",
+      "id": 1327,
+      "name": "Pitkin Foreclosure",
+      "label": "CO - Pitkin Foreclosure",
+      "snapshot": "CO-copitkinforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cosaguachetread",
+      "id": 1418,
+      "name": "Saguache County Treasurer's Deed",
+      "label": "CO - Saguache County Treasurer's Deed",
+      "snapshot": "CO-cosaguachetread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cosummittread",
+      "id": 1439,
+      "name": "Summit County Treasurer's Deed",
+      "label": "CO - Summit County Treasurer's Deed",
+      "snapshot": "CO-cosummittread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cosummitforeclosure",
+      "id": 1374,
+      "name": "Summit Foreclosure",
+      "label": "CO - Summit Foreclosure",
+      "snapshot": "CO-cosummitforeclosure.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cotellertread",
+      "id": 1489,
+      "name": "Teller County Treasurer's Deed",
+      "label": "CO - Teller County Treasurer's Deed",
+      "snapshot": "CO-cotellertread.json"
+    },
+    {
+      "state": "CO",
+      "slug": "cotellerforeclosure",
+      "id": 1419,
+      "name": "Teller Foreclosure",
+      "label": "CO - Teller Foreclosure",
+      "snapshot": "CO-cotellerforeclosure.json"
+    },
+    {
+      "state": "GA",
+      "slug": "gaglynn",
+      "id": 1208,
+      "name": "Glynn",
+      "label": "GA - Glynn",
+      "snapshot": "GA-gaglynn.json"
+    },
+    {
+      "state": "IA",
+      "slug": "iacarroll",
+      "id": 1502,
+      "name": "Carroll",
+      "label": "IA - Carroll",
+      "snapshot": "IA-iacarroll.json"
+    },
+    {
+      "state": "IA",
+      "slug": "iapolkadjourned",
+      "id": 1380,
+      "name": "Polk - Adjourned Sales",
+      "label": "IA - Polk - Adjourned Sales",
+      "snapshot": "IA-iapolkadjourned.json"
+    },
+    {
+      "state": "IA",
+      "slug": "iapoweshiek",
+      "id": 1501,
+      "name": "Poweshiek",
+      "label": "IA - Poweshiek",
+      "snapshot": "IA-iapoweshiek.json"
+    },
+    {
+      "state": "IN",
+      "slug": "inmarion",
+      "id": 1282,
+      "name": "Marion",
+      "label": "IN - Marion",
+      "snapshot": "IN-inmarion.json"
+    },
+    {
+      "state": "IN",
+      "slug": "inmarionnonprofitauction",
+      "id": 1319,
+      "name": "Marion (Nonprofit Auction)",
+      "label": "IN - Marion (Nonprofit Auction)",
+      "snapshot": "IN-inmarionnonprofitauction.json"
+    },
+    {
+      "state": "IN",
+      "slug": "inmarionsheriff",
+      "id": 1375,
+      "name": "Marion Sheriff Sales",
+      "label": "IN - Marion Sheriff Sales",
+      "snapshot": "IN-inmarionsheriff.json"
+    },
+    {
+      "state": "LA",
+      "slug": "lacityoffranklin",
+      "id": 1506,
+      "name": "City of Franklin",
+      "label": "LA - City of Franklin",
+      "snapshot": "LA-lacityoffranklin.json"
+    },
+    {
+      "state": "LA",
+      "slug": "lacityofmorgancity",
+      "id": 1505,
+      "name": "City of Morgan City",
+      "label": "LA - City of Morgan City",
+      "snapshot": "LA-lacityofmorgancity.json"
+    },
+    {
+      "state": "LA",
+      "slug": "lalincoln",
+      "id": 1508,
+      "name": "Lincoln",
+      "label": "LA - Lincoln",
+      "snapshot": "LA-lalincoln.json"
+    },
+    {
+      "state": "LA",
+      "slug": "lastmary",
+      "id": 1504,
+      "name": "St. Mary",
+      "label": "LA - St. Mary",
+      "snapshot": "LA-lastmary.json"
+    },
+    {
+      "state": "LA",
+      "slug": "latensas",
+      "id": 1496,
+      "name": "Tensas",
+      "label": "LA - Tensas",
+      "snapshot": "LA-latensas.json"
+    },
+    {
+      "state": "LA",
+      "slug": "launion",
+      "id": 1507,
+      "name": "Union",
+      "label": "LA - Union",
+      "snapshot": "LA-launion.json"
+    },
+    {
+      "state": "MS",
+      "slug": "amite",
+      "id": 1003,
+      "name": "Amite",
+      "label": "MS - Amite",
+      "snapshot": "MS-amite.json"
+    },
+    {
+      "state": "MS",
+      "slug": "msbolivardis1",
+      "id": 1006,
+      "name": "Bolivar Dist 1",
+      "label": "MS - Bolivar Dist 1",
+      "snapshot": "MS-msbolivardis1.json"
+    },
+    {
+      "state": "MS",
+      "slug": "msbolivardis2",
+      "id": 1091,
+      "name": "Bolivar Dist 2",
+      "label": "MS - Bolivar Dist 2",
+      "snapshot": "MS-msbolivardis2.json"
+    },
+    {
+      "state": "MS",
+      "slug": "mscitywestpoint",
+      "id": 1094,
+      "name": "City of West Point",
+      "label": "MS - City of West Point",
+      "snapshot": "MS-mscitywestpoint.json"
+    },
+    {
+      "state": "MS",
+      "slug": "mscoahoma",
+      "id": 1014,
+      "name": "Coahoma",
+      "label": "MS - Coahoma",
+      "snapshot": "MS-mscoahoma.json"
+    },
+    {
+      "state": "MS",
+      "slug": "msquitman",
+      "id": 1060,
+      "name": "Quitman",
+      "label": "MS - Quitman",
+      "snapshot": "MS-msquitman.json"
+    },
+    {
+      "state": "MS",
+      "slug": "mssunflower",
+      "id": 1067,
+      "name": "Sunflower",
+      "label": "MS - Sunflower",
+      "snapshot": "MS-mssunflower.json"
+    },
+    {
+      "state": "MS",
+      "slug": "mswashington",
+      "id": 1076,
+      "name": "Washington",
+      "label": "MS - Washington",
+      "snapshot": "MS-mswashington.json"
+    },
+    {
+      "state": "MS",
+      "slug": "msyalobushadist1",
+      "id": 1081,
+      "name": "Yalobusha Dist 1",
+      "label": "MS - Yalobusha Dist 1",
+      "snapshot": "MS-msyalobushadist1.json"
+    },
+    {
+      "state": "MS",
+      "slug": "msyalobushadist2",
+      "id": 1090,
+      "name": "Yalobusha Dist 2",
+      "label": "MS - Yalobusha Dist 2",
+      "snapshot": "MS-msyalobushadist2.json"
+    },
+    {
+      "state": "OK",
+      "slug": "okrogers",
+      "id": 1498,
+      "name": "Rogers",
+      "label": "OK - Rogers",
+      "snapshot": "OK-okrogers.json"
+    },
+    {
+      "state": "PA",
+      "slug": "palawrencejudicial",
+      "id": 1492,
+      "name": "Lawrence - Judicial Sale",
+      "label": "PA - Lawrence - Judicial Sale",
+      "snapshot": "PA-palawrencejudicial.json"
+    },
+    {
+      "state": "PA",
+      "slug": "payorkjudicial",
+      "id": 1341,
+      "name": "York - Judicial Sale",
+      "label": "PA - York - Judicial Sale",
+      "snapshot": "PA-payorkjudicial.json"
+    },
+    {
+      "state": "RI",
+      "slug": "cityofprovidenceri",
+      "id": 1510,
+      "name": "City of Providence",
+      "label": "RI - City of Providence",
+      "snapshot": "RI-cityofprovidenceri.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tncarroll",
+      "id": 1493,
+      "name": "Carroll",
+      "label": "TN - Carroll",
+      "snapshot": "TN-tncarroll.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tncarrollposting",
+      "id": 1494,
+      "name": "Carroll Special Commissioner Sale Posting",
+      "label": "TN - Carroll Special Commissioner Sale Posting",
+      "snapshot": "TN-tncarrollposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tncarter",
+      "id": 1246,
+      "name": "Carter",
+      "label": "TN - Carter",
+      "snapshot": "TN-tncarter.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnchesterspeccommissioner",
+      "id": 1377,
+      "name": "Chester (Special Commissioner's Sale)",
+      "label": "TN - Chester (Special Commissioner's Sale)",
+      "snapshot": "TN-tnchesterspeccommissioner.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tncumberland",
+      "id": 1509,
+      "name": "Cumberland",
+      "label": "TN - Cumberland",
+      "snapshot": "TN-tncumberland.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tncumberlandposting",
+      "id": 1503,
+      "name": "Cumberland Special Commissioner Sale Posting",
+      "label": "TN - Cumberland Special Commissioner Sale Posting",
+      "snapshot": "TN-tncumberlandposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnhamblenposting",
+      "id": 1459,
+      "name": "Hamblen Special Commissioner Sale Posting",
+      "label": "TN - Hamblen Special Commissioner Sale Posting",
+      "snapshot": "TN-tnhamblenposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnhardeman",
+      "id": 1207,
+      "name": "Hardeman",
+      "label": "TN - Hardeman",
+      "snapshot": "TN-tnhardeman.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnhawkinsposting",
+      "id": 1488,
+      "name": "Hawkins Special Commissioner Sale Posting",
+      "label": "TN - Hawkins Special Commissioner Sale Posting",
+      "snapshot": "TN-tnhawkinsposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnlawrenceposting",
+      "id": 1478,
+      "name": "Lawrence Special Commissioner Sale Posting",
+      "label": "TN - Lawrence Special Commissioner Sale Posting",
+      "snapshot": "TN-tnlawrenceposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnmadison",
+      "id": 1232,
+      "name": "Madison",
+      "label": "TN - Madison",
+      "snapshot": "TN-tnmadison.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnmadisonspeccommissioner",
+      "id": 1378,
+      "name": "Madison (Special Commissioner's Sale)",
+      "label": "TN - Madison (Special Commissioner's Sale)",
+      "snapshot": "TN-tnmadisonspeccommissioner.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnmadisonsurplus",
+      "id": 1421,
+      "name": "Madison Surplus Sale",
+      "label": "TN - Madison Surplus Sale",
+      "snapshot": "TN-tnmadisonsurplus.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnobion",
+      "id": 1360,
+      "name": "Obion",
+      "label": "TN - Obion",
+      "snapshot": "TN-tnobion.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnrutherfordcitymurfreesboro",
+      "id": 1237,
+      "name": "Rutherford County/City of Murfreesboro",
+      "label": "TN - Rutherford County/City of Murfreesboro",
+      "snapshot": "TN-tnrutherfordcitymurfreesboro.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnsullivanposting",
+      "id": 1480,
+      "name": "Sullivan Special Commissioner Sale Posting",
+      "label": "TN - Sullivan Special Commissioner Sale Posting",
+      "snapshot": "TN-tnsullivanposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnwashington",
+      "id": 1243,
+      "name": "Washington",
+      "label": "TN - Washington",
+      "snapshot": "TN-tnwashington.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnwashingtonposting",
+      "id": 1511,
+      "name": "Washington Special Commissioner Sale Posting",
+      "label": "TN - Washington Special Commissioner Sale Posting",
+      "snapshot": "TN-tnwashingtonposting.json"
+    },
+    {
+      "state": "TN",
+      "slug": "tnwayneposting",
+      "id": 1491,
+      "name": "Wayne Special Commissioner Sale Posting",
+      "label": "TN - Wayne Special Commissioner Sale Posting",
+      "snapshot": "TN-tnwayneposting.json"
+    },
+    {
+      "state": "TX",
+      "slug": "txdenton",
+      "id": 1355,
+      "name": "Denton",
+      "label": "TX - Denton",
+      "snapshot": "TX-txdenton.json"
+    },
+    {
+      "state": "TX",
+      "slug": "txgrayson",
+      "id": 1280,
+      "name": "Grayson",
+      "label": "TX - Grayson",
+      "snapshot": "TX-txgrayson.json"
+    },
+    {
+      "state": "TX",
+      "slug": "txmclennan",
+      "id": 1444,
+      "name": "McLennan - MVBA",
+      "label": "TX - McLennan - MVBA",
+      "snapshot": "TX-txmclennan.json"
+    },
+    {
+      "state": "WA",
+      "slug": "wacolumbia",
+      "id": 1397,
+      "name": "Columbia",
+      "label": "WA - Columbia",
+      "snapshot": "WA-wacolumbia.json"
+    },
+    {
+      "state": "WA",
+      "slug": "wacolumbiasurplus",
+      "id": 1457,
+      "name": "Columbia Surplus",
+      "label": "WA - Columbia Surplus",
+      "snapshot": "WA-wacolumbiasurplus.json"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Runtime state — rebuilt by each service.py run.
+data/service-state.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+.claude/
+*.swp

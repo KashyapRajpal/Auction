@@ -1,0 +1,1023 @@
+{
+  "updated_at": "2026-05-02T20:35:56+00:00",
+  "count": 113,
+  "snapshots": [
+    {
+      "file": "AL-albaldwin.json",
+      "state": "AL",
+      "slug": "albaldwin",
+      "id": 1101,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:08:46+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-albarbour.json",
+      "state": "AL",
+      "slug": "albarbour",
+      "id": 1262,
+      "parcel_count": 128,
+      "fetched_at": "2026-05-02T17:39:36+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-albibb.json",
+      "state": "AL",
+      "slug": "albibb",
+      "id": 1334,
+      "parcel_count": 70,
+      "fetched_at": "2026-05-02T17:59:51+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-albutler.json",
+      "state": "AL",
+      "slug": "albutler",
+      "id": 1264,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:42:25+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alcalhoun.json",
+      "state": "AL",
+      "slug": "alcalhoun",
+      "id": 1216,
+      "parcel_count": 1868,
+      "fetched_at": "2026-05-02T14:59:26+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-alcherokee.json",
+      "state": "AL",
+      "slug": "alcherokee",
+      "id": 1220,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:45:10+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alcolbert.json",
+      "state": "AL",
+      "slug": "alcolbert",
+      "id": 1252,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:32:11+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alconecuh.json",
+      "state": "AL",
+      "slug": "alconecuh",
+      "id": 1250,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:57:00+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alcovington.json",
+      "state": "AL",
+      "slug": "alcovington",
+      "id": 1359,
+      "parcel_count": 280,
+      "fetched_at": "2026-05-02T16:24:18+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-aldale.json",
+      "state": "AL",
+      "slug": "aldale",
+      "id": 1251,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:40:12+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-aldallas.json",
+      "state": "AL",
+      "slug": "aldallas",
+      "id": 1333,
+      "parcel_count": 916,
+      "fetched_at": "2026-05-02T16:57:43+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-aldekalb.json",
+      "state": "AL",
+      "slug": "aldekalb",
+      "id": 1219,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:42:51+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alelmore.json",
+      "state": "AL",
+      "slug": "alelmore",
+      "id": 1210,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:44:21+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alescambia.json",
+      "state": "AL",
+      "slug": "alescambia",
+      "id": 1263,
+      "parcel_count": 853,
+      "fetched_at": "2026-05-02T17:15:48+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-aletowah.json",
+      "state": "AL",
+      "slug": "aletowah",
+      "id": 1258,
+      "parcel_count": 1571,
+      "fetched_at": "2026-05-02T11:57:15+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-alfranklin.json",
+      "state": "AL",
+      "slug": "alfranklin",
+      "id": 1265,
+      "parcel_count": 121,
+      "fetched_at": "2026-05-02T17:37:24+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-algeneva.json",
+      "state": "AL",
+      "slug": "algeneva",
+      "id": 1362,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:17:50+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alhale.json",
+      "state": "AL",
+      "slug": "alhale",
+      "id": 1309,
+      "parcel_count": 299,
+      "fetched_at": "2026-05-02T17:50:07+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-alhenry.json",
+      "state": "AL",
+      "slug": "alhenry",
+      "id": 1335,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:14:07+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alhouston.json",
+      "state": "AL",
+      "slug": "alhouston",
+      "id": 1475,
+      "parcel_count": 166,
+      "fetched_at": "2026-05-02T17:56:17+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-aljackson.json",
+      "state": "AL",
+      "slug": "aljackson",
+      "id": 1215,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:03:04+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-aljeffersonbessemer.json",
+      "state": "AL",
+      "slug": "aljeffersonbessemer",
+      "id": 1312,
+      "parcel_count": 4823,
+      "fetched_at": "2026-05-02T20:35:55+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-allamar.json",
+      "state": "AL",
+      "slug": "allamar",
+      "id": 1269,
+      "parcel_count": 419,
+      "fetched_at": "2026-05-02T17:44:18+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-allauderdale.json",
+      "state": "AL",
+      "slug": "allauderdale",
+      "id": 1310,
+      "parcel_count": 597,
+      "fetched_at": "2026-05-01T14:55:43+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almacon.json",
+      "state": "AL",
+      "slug": "almacon",
+      "id": 1254,
+      "parcel_count": 666,
+      "fetched_at": "2026-05-02T17:29:34+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almadison.json",
+      "state": "AL",
+      "slug": "almadison",
+      "id": 1308,
+      "parcel_count": 876,
+      "fetched_at": "2026-05-02T17:06:55+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almarengo.json",
+      "state": "AL",
+      "slug": "almarengo",
+      "id": 1256,
+      "parcel_count": 25,
+      "fetched_at": "2026-05-02T17:54:01+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almarion.json",
+      "state": "AL",
+      "slug": "almarion",
+      "id": 1363,
+      "parcel_count": 533,
+      "fetched_at": "2026-05-02T17:35:17+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almobile.json",
+      "state": "AL",
+      "slug": "almobile",
+      "id": 1209,
+      "parcel_count": 5601,
+      "fetched_at": "2026-05-02T01:39:01+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almonroe.json",
+      "state": "AL",
+      "slug": "almonroe",
+      "id": 1259,
+      "parcel_count": 112,
+      "fetched_at": "2026-05-02T17:58:22+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-almorgan.json",
+      "state": "AL",
+      "slug": "almorgan",
+      "id": 1261,
+      "parcel_count": 331,
+      "fetched_at": "2026-05-01T15:44:00+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-alpike.json",
+      "state": "AL",
+      "slug": "alpike",
+      "id": 1267,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-02T16:20:02+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alrandolph.json",
+      "state": "AL",
+      "slug": "alrandolph",
+      "id": 1274,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T15:08:52+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alshelby.json",
+      "state": "AL",
+      "slug": "alshelby",
+      "id": 1211,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:12:50+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alstclair.json",
+      "state": "AL",
+      "slug": "alstclair",
+      "id": 1260,
+      "parcel_count": 228,
+      "fetched_at": "2026-05-02T19:15:36+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-altalladega.json",
+      "state": "AL",
+      "slug": "altalladega",
+      "id": 1217,
+      "parcel_count": 1960,
+      "fetched_at": "2026-05-02T16:48:25+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-altallapoosa.json",
+      "state": "AL",
+      "slug": "altallapoosa",
+      "id": 1257,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:16:14+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-altuscaloosa.json",
+      "state": "AL",
+      "slug": "altuscaloosa",
+      "id": 1253,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:09:05+00:00",
+      "enriched": false
+    },
+    {
+      "file": "AL-alwalker.json",
+      "state": "AL",
+      "slug": "alwalker",
+      "id": 1255,
+      "parcel_count": 615,
+      "fetched_at": "2026-05-02T17:22:30+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AL-alwinstin.json",
+      "state": "AL",
+      "slug": "alwinstin",
+      "id": 1307,
+      "parcel_count": 161,
+      "fetched_at": "2026-05-02T19:14:50+00:00",
+      "enriched": true
+    },
+    {
+      "file": "AZ-azcochise.json",
+      "state": "AZ",
+      "slug": "azcochise",
+      "id": 1242,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:32:38+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CA-cadelnorte.json",
+      "state": "CA",
+      "slug": "cadelnorte",
+      "id": 1366,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:48:15+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CA-cahumboldt.json",
+      "state": "CA",
+      "slug": "cahumboldt",
+      "id": 1314,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:22:13+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CA-calake.json",
+      "state": "CA",
+      "slug": "calake",
+      "id": 1440,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:19:14+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CA-calosangeles.json",
+      "state": "CA",
+      "slug": "calosangeles",
+      "id": 1391,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:26:32+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-coalamosatread.json",
+      "state": "CO",
+      "slug": "coalamosatread",
+      "id": 1401,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:26:01+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cocostillalandsale.json",
+      "state": "CO",
+      "slug": "cocostillalandsale",
+      "id": 1469,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:00:42+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cocostillatread.json",
+      "state": "CO",
+      "slug": "cocostillatread",
+      "id": 1435,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:21:16+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-codouglasforeclosure.json",
+      "state": "CO",
+      "slug": "codouglasforeclosure",
+      "id": 1400,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:53:38+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-codouglastread.json",
+      "state": "CO",
+      "slug": "codouglastread",
+      "id": 1479,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T15:05:21+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cogarfieldforeclosure.json",
+      "state": "CO",
+      "slug": "cogarfieldforeclosure",
+      "id": 1324,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:57:43+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cogarfieldtread.json",
+      "state": "CO",
+      "slug": "cogarfieldtread",
+      "id": 1420,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:46:14+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cojeffersonforeclosure.json",
+      "state": "CO",
+      "slug": "cojeffersonforeclosure",
+      "id": 1281,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:50:13+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-colarimertread.json",
+      "state": "CO",
+      "slug": "colarimertread",
+      "id": 1452,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:13:18+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-coparkforeclosure.json",
+      "state": "CO",
+      "slug": "coparkforeclosure",
+      "id": 1322,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:59:43+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-coparktread.json",
+      "state": "CO",
+      "slug": "coparktread",
+      "id": 1438,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:27:40+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-copitkinforeclosure.json",
+      "state": "CO",
+      "slug": "copitkinforeclosure",
+      "id": 1327,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:11:58+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cosaguachetread.json",
+      "state": "CO",
+      "slug": "cosaguachetread",
+      "id": 1418,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:32:29+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cosummitforeclosure.json",
+      "state": "CO",
+      "slug": "cosummitforeclosure",
+      "id": 1374,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:33:59+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cosummittread.json",
+      "state": "CO",
+      "slug": "cosummittread",
+      "id": 1439,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:48:18+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cotellerforeclosure.json",
+      "state": "CO",
+      "slug": "cotellerforeclosure",
+      "id": 1419,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:32:52+00:00",
+      "enriched": false
+    },
+    {
+      "file": "CO-cotellertread.json",
+      "state": "CO",
+      "slug": "cotellertread",
+      "id": 1489,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:48:46+00:00",
+      "enriched": false
+    },
+    {
+      "file": "GA-gaglynn.json",
+      "state": "GA",
+      "slug": "gaglynn",
+      "id": 1208,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:41:27+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IA-iacarroll.json",
+      "state": "IA",
+      "slug": "iacarroll",
+      "id": 1502,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T15:00:42+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IA-iapolkadjourned.json",
+      "state": "IA",
+      "slug": "iapolkadjourned",
+      "id": 1380,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:48:56+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IA-iapoweshiek.json",
+      "state": "IA",
+      "slug": "iapoweshiek",
+      "id": 1501,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:12:17+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IN-inmarion.json",
+      "state": "IN",
+      "slug": "inmarion",
+      "id": 1282,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:26:59+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IN-inmarionnonprofitauction.json",
+      "state": "IN",
+      "slug": "inmarionnonprofitauction",
+      "id": 1319,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:18:35+00:00",
+      "enriched": false
+    },
+    {
+      "file": "IN-inmarionsheriff.json",
+      "state": "IN",
+      "slug": "inmarionsheriff",
+      "id": 1375,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:06:36+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-lacityoffranklin.json",
+      "state": "LA",
+      "slug": "lacityoffranklin",
+      "id": 1506,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:49:42+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-lacityofmorgancity.json",
+      "state": "LA",
+      "slug": "lacityofmorgancity",
+      "id": 1505,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:32:28+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-lalincoln.json",
+      "state": "LA",
+      "slug": "lalincoln",
+      "id": 1508,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:16:56+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-lastmary.json",
+      "state": "LA",
+      "slug": "lastmary",
+      "id": 1504,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:32:03+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-latensas.json",
+      "state": "LA",
+      "slug": "latensas",
+      "id": 1496,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:33:41+00:00",
+      "enriched": false
+    },
+    {
+      "file": "LA-launion.json",
+      "state": "LA",
+      "slug": "launion",
+      "id": 1507,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:13:36+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-amite.json",
+      "state": "MS",
+      "slug": "amite",
+      "id": 1003,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:19:38+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-msbolivardis1.json",
+      "state": "MS",
+      "slug": "msbolivardis1",
+      "id": 1006,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:42:28+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-msbolivardis2.json",
+      "state": "MS",
+      "slug": "msbolivardis2",
+      "id": 1091,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T14:56:26+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-mscitywestpoint.json",
+      "state": "MS",
+      "slug": "mscitywestpoint",
+      "id": 1094,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:36:45+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-mscoahoma.json",
+      "state": "MS",
+      "slug": "mscoahoma",
+      "id": 1014,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:36:47+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-msquitman.json",
+      "state": "MS",
+      "slug": "msquitman",
+      "id": 1060,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:04:01+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-mssunflower.json",
+      "state": "MS",
+      "slug": "mssunflower",
+      "id": 1067,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:07:10+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-mswashington.json",
+      "state": "MS",
+      "slug": "mswashington",
+      "id": 1076,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T07:49:16+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-msyalobushadist1.json",
+      "state": "MS",
+      "slug": "msyalobushadist1",
+      "id": 1081,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:46:08+00:00",
+      "enriched": false
+    },
+    {
+      "file": "MS-msyalobushadist2.json",
+      "state": "MS",
+      "slug": "msyalobushadist2",
+      "id": 1090,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:58:23+00:00",
+      "enriched": false
+    },
+    {
+      "file": "OK-okrogers.json",
+      "state": "OK",
+      "slug": "okrogers",
+      "id": 1498,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:08:07+00:00",
+      "enriched": false
+    },
+    {
+      "file": "PA-palawrencejudicial.json",
+      "state": "PA",
+      "slug": "palawrencejudicial",
+      "id": 1492,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T15:05:58+00:00",
+      "enriched": false
+    },
+    {
+      "file": "PA-payorkjudicial.json",
+      "state": "PA",
+      "slug": "payorkjudicial",
+      "id": 1341,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:22:08+00:00",
+      "enriched": false
+    },
+    {
+      "file": "RI-cityofprovidenceri.json",
+      "state": "RI",
+      "slug": "cityofprovidenceri",
+      "id": 1510,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:12:04+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tncarroll.json",
+      "state": "TN",
+      "slug": "tncarroll",
+      "id": 1493,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:39:13+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tncarrollposting.json",
+      "state": "TN",
+      "slug": "tncarrollposting",
+      "id": 1494,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:03:37+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tncarter.json",
+      "state": "TN",
+      "slug": "tncarter",
+      "id": 1246,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:34:49+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnchesterspeccommissioner.json",
+      "state": "TN",
+      "slug": "tnchesterspeccommissioner",
+      "id": 1377,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:11:20+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tncumberland.json",
+      "state": "TN",
+      "slug": "tncumberland",
+      "id": 1509,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:59:47+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tncumberlandposting.json",
+      "state": "TN",
+      "slug": "tncumberlandposting",
+      "id": 1503,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:36:58+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnhamblenposting.json",
+      "state": "TN",
+      "slug": "tnhamblenposting",
+      "id": 1459,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:38:27+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnhardeman.json",
+      "state": "TN",
+      "slug": "tnhardeman",
+      "id": 1207,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:29:58+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnhawkinsposting.json",
+      "state": "TN",
+      "slug": "tnhawkinsposting",
+      "id": 1488,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:28:20+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnlawrenceposting.json",
+      "state": "TN",
+      "slug": "tnlawrenceposting",
+      "id": 1478,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:12:42+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnmadison.json",
+      "state": "TN",
+      "slug": "tnmadison",
+      "id": 1232,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:11:31+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnmadisonspeccommissioner.json",
+      "state": "TN",
+      "slug": "tnmadisonspeccommissioner",
+      "id": 1378,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:41:21+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnmadisonsurplus.json",
+      "state": "TN",
+      "slug": "tnmadisonsurplus",
+      "id": 1421,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:56:39+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnobion.json",
+      "state": "TN",
+      "slug": "tnobion",
+      "id": 1360,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:52:03+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnrutherfordcitymurfreesboro.json",
+      "state": "TN",
+      "slug": "tnrutherfordcitymurfreesboro",
+      "id": 1237,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T09:05:13+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnsullivanposting.json",
+      "state": "TN",
+      "slug": "tnsullivanposting",
+      "id": 1480,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:34:02+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnwashington.json",
+      "state": "TN",
+      "slug": "tnwashington",
+      "id": 1243,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:30:48+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnwashingtonposting.json",
+      "state": "TN",
+      "slug": "tnwashingtonposting",
+      "id": 1511,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T10:53:36+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TN-tnwayneposting.json",
+      "state": "TN",
+      "slug": "tnwayneposting",
+      "id": 1491,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T08:35:13+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TX-txdenton.json",
+      "state": "TX",
+      "slug": "txdenton",
+      "id": 1355,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T16:33:06+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TX-txgrayson.json",
+      "state": "TX",
+      "slug": "txgrayson",
+      "id": 1280,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T12:36:46+00:00",
+      "enriched": false
+    },
+    {
+      "file": "TX-txmclennan.json",
+      "state": "TX",
+      "slug": "txmclennan",
+      "id": 1444,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T13:54:38+00:00",
+      "enriched": false
+    },
+    {
+      "file": "WA-wacolumbia.json",
+      "state": "WA",
+      "slug": "wacolumbia",
+      "id": 1397,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T15:48:28+00:00",
+      "enriched": false
+    },
+    {
+      "file": "WA-wacolumbiasurplus.json",
+      "state": "WA",
+      "slug": "wacolumbiasurplus",
+      "id": 1457,
+      "parcel_count": 0,
+      "fetched_at": "2026-05-01T11:45:49+00:00",
+      "enriched": false
+    }
+  ]
+}

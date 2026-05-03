@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "CA",
+    "slug": "calosangeles",
+    "id": 1391
+  },
+  "fetched_at": "2026-05-01T09:26:32+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

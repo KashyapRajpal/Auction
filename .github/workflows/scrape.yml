@@ -1,0 +1,52 @@
+name: Scrape
+
+# GitHub cron does not support "every 15 days" directly. Closest stable
+# approximation: 1st and 16th of each month at 06:00 UTC.
+on:
+  schedule:
+    - cron: '0 6 1,16 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350    # leaves headroom under the 6-hour job limit
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - run: pip install requests
+
+      # `timeout 18000` = 5h cap. Snapshots are written per-county as we go,
+      # so a timeout exit (124) just means we stopped mid-sweep — treat as
+      # success and commit whatever was scraped this run.
+      - name: Scrape all counties
+        run: |
+          set +e
+          timeout 18000 python src/scrape.py all
+          rc=$?
+          if [ $rc -ne 0 ] && [ $rc -ne 124 ]; then
+            exit $rc
+          fi
+
+      - name: Commit refreshed snapshots
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/snapshots data/manifest.json
+          if git diff --cached --quiet; then
+            echo 'No snapshot changes to commit.'
+          else
+            git commit -m "chore(data): scheduled scrape $(date -u +%Y-%m-%d)"
+            git push
+          fi

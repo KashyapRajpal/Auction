@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "CO",
+    "slug": "coparkforeclosure",
+    "id": 1322
+  },
+  "fetched_at": "2026-05-01T07:59:43+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

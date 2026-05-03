@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "MS",
+    "slug": "mswashington",
+    "id": 1076
+  },
+  "fetched_at": "2026-05-01T07:49:16+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

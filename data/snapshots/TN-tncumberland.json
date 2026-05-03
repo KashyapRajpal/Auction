@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "TN",
+    "slug": "tncumberland",
+    "id": 1509
+  },
+  "fetched_at": "2026-05-01T08:59:47+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

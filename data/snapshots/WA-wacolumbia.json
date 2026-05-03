@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "WA",
+    "slug": "wacolumbia",
+    "id": 1397
+  },
+  "fetched_at": "2026-05-01T15:48:28+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

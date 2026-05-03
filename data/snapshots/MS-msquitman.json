@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "MS",
+    "slug": "msquitman",
+    "id": 1060
+  },
+  "fetched_at": "2026-05-01T08:04:01+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}

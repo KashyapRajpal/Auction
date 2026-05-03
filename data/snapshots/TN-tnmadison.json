@@ -1,0 +1,10 @@
+{
+  "county": {
+    "state": "TN",
+    "slug": "tnmadison",
+    "id": 1232
+  },
+  "fetched_at": "2026-05-01T13:11:31+00:00",
+  "parcel_count": 0,
+  "parcels": []
+}
