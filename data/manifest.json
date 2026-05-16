@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T20:35:56+00:00",
+  "updated_at": "2026-05-16T07:51:27+00:00",
   "count": 113,
   "snapshots": [
     {
@@ -8,7 +8,7 @@
       "slug": "albaldwin",
       "id": 1101,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:08:46+00:00",
+      "fetched_at": "2026-05-16T07:25:38+00:00",
       "enriched": false
     },
     {
@@ -16,18 +16,18 @@
       "state": "AL",
       "slug": "albarbour",
       "id": 1262,
-      "parcel_count": 128,
-      "fetched_at": "2026-05-02T17:39:36+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:25:11+00:00",
+      "enriched": false
     },
     {
       "file": "AL-albibb.json",
       "state": "AL",
       "slug": "albibb",
       "id": 1334,
-      "parcel_count": 70,
-      "fetched_at": "2026-05-02T17:59:51+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:20:27+00:00",
+      "enriched": false
     },
     {
       "file": "AL-albutler.json",
@@ -35,7 +35,7 @@
       "slug": "albutler",
       "id": 1264,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:42:25+00:00",
+      "fetched_at": "2026-05-16T07:24:44+00:00",
       "enriched": false
     },
     {
@@ -43,9 +43,9 @@
       "state": "AL",
       "slug": "alcalhoun",
       "id": 1216,
-      "parcel_count": 1868,
-      "fetched_at": "2026-05-02T14:59:26+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:32:56+00:00",
+      "enriched": false
     },
     {
       "file": "AL-alcherokee.json",
@@ -53,7 +53,7 @@
       "slug": "alcherokee",
       "id": 1220,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:45:10+00:00",
+      "fetched_at": "2026-05-16T07:46:00+00:00",
       "enriched": false
     },
     {
@@ -62,7 +62,7 @@
       "slug": "alcolbert",
       "id": 1252,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:32:11+00:00",
+      "fetched_at": "2026-05-16T07:37:28+00:00",
       "enriched": false
     },
     {
@@ -71,7 +71,7 @@
       "slug": "alconecuh",
       "id": 1250,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:57:00+00:00",
+      "fetched_at": "2026-05-16T06:53:09+00:00",
       "enriched": false
     },
     {
@@ -79,8 +79,8 @@
       "state": "AL",
       "slug": "alcovington",
       "id": 1359,
-      "parcel_count": 280,
-      "fetched_at": "2026-05-02T16:24:18+00:00",
+      "parcel_count": 124,
+      "fetched_at": "2026-05-16T07:39:11+00:00",
       "enriched": true
     },
     {
@@ -89,7 +89,7 @@
       "slug": "aldale",
       "id": 1251,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:40:12+00:00",
+      "fetched_at": "2026-05-16T07:18:03+00:00",
       "enriched": false
     },
     {
@@ -97,9 +97,9 @@
       "state": "AL",
       "slug": "aldallas",
       "id": 1333,
-      "parcel_count": 916,
-      "fetched_at": "2026-05-02T16:57:43+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:27:47+00:00",
+      "enriched": false
     },
     {
       "file": "AL-aldekalb.json",
@@ -107,7 +107,7 @@
       "slug": "aldekalb",
       "id": 1219,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:42:51+00:00",
+      "fetched_at": "2026-05-16T07:33:32+00:00",
       "enriched": false
     },
     {
@@ -116,7 +116,7 @@
       "slug": "alelmore",
       "id": 1210,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:44:21+00:00",
+      "fetched_at": "2026-05-16T07:43:32+00:00",
       "enriched": false
     },
     {
@@ -124,8 +124,8 @@
       "state": "AL",
       "slug": "alescambia",
       "id": 1263,
-      "parcel_count": 853,
-      "fetched_at": "2026-05-02T17:15:48+00:00",
+      "parcel_count": 498,
+      "fetched_at": "2026-05-16T07:32:07+00:00",
       "enriched": true
     },
     {
@@ -133,18 +133,18 @@
       "state": "AL",
       "slug": "aletowah",
       "id": 1258,
-      "parcel_count": 1571,
-      "fetched_at": "2026-05-02T11:57:15+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:41:45+00:00",
+      "enriched": false
     },
     {
       "file": "AL-alfranklin.json",
       "state": "AL",
       "slug": "alfranklin",
       "id": 1265,
-      "parcel_count": 121,
-      "fetched_at": "2026-05-02T17:37:24+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:26:41+00:00",
+      "enriched": false
     },
     {
       "file": "AL-algeneva.json",
@@ -152,7 +152,7 @@
       "slug": "algeneva",
       "id": 1362,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:17:50+00:00",
+      "fetched_at": "2026-05-16T07:47:32+00:00",
       "enriched": false
     },
     {
@@ -160,8 +160,8 @@
       "state": "AL",
       "slug": "alhale",
       "id": 1309,
-      "parcel_count": 299,
-      "fetched_at": "2026-05-02T17:50:07+00:00",
+      "parcel_count": 118,
+      "fetched_at": "2026-05-16T07:51:03+00:00",
       "enriched": true
     },
     {
@@ -170,7 +170,7 @@
       "slug": "alhenry",
       "id": 1335,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:14:07+00:00",
+      "fetched_at": "2026-05-16T06:57:50+00:00",
       "enriched": false
     },
     {
@@ -178,9 +178,9 @@
       "state": "AL",
       "slug": "alhouston",
       "id": 1475,
-      "parcel_count": 166,
-      "fetched_at": "2026-05-02T17:56:17+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:45:00+00:00",
+      "enriched": false
     },
     {
       "file": "AL-aljackson.json",
@@ -188,7 +188,7 @@
       "slug": "aljackson",
       "id": 1215,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:03:04+00:00",
+      "fetched_at": "2026-05-16T06:56:37+00:00",
       "enriched": false
     },
     {
@@ -196,62 +196,62 @@
       "state": "AL",
       "slug": "aljeffersonbessemer",
       "id": 1312,
-      "parcel_count": 4823,
-      "fetched_at": "2026-05-02T20:35:55+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:41:25+00:00",
+      "enriched": false
     },
     {
       "file": "AL-allamar.json",
       "state": "AL",
       "slug": "allamar",
       "id": 1269,
-      "parcel_count": 419,
-      "fetched_at": "2026-05-02T17:44:18+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T06:54:04+00:00",
+      "enriched": false
     },
     {
       "file": "AL-allauderdale.json",
       "state": "AL",
       "slug": "allauderdale",
       "id": 1310,
-      "parcel_count": 597,
-      "fetched_at": "2026-05-01T14:55:43+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:40:52+00:00",
+      "enriched": false
     },
     {
       "file": "AL-almacon.json",
       "state": "AL",
       "slug": "almacon",
       "id": 1254,
-      "parcel_count": 666,
-      "fetched_at": "2026-05-02T17:29:34+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T06:52:46+00:00",
+      "enriched": false
     },
     {
       "file": "AL-almadison.json",
       "state": "AL",
       "slug": "almadison",
       "id": 1308,
-      "parcel_count": 876,
-      "fetched_at": "2026-05-02T17:06:55+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:01:13+00:00",
+      "enriched": false
     },
     {
       "file": "AL-almarengo.json",
       "state": "AL",
       "slug": "almarengo",
       "id": 1256,
-      "parcel_count": 25,
-      "fetched_at": "2026-05-02T17:54:01+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:34:54+00:00",
+      "enriched": false
     },
     {
       "file": "AL-almarion.json",
       "state": "AL",
       "slug": "almarion",
       "id": 1363,
-      "parcel_count": 533,
-      "fetched_at": "2026-05-02T17:35:17+00:00",
+      "parcel_count": 191,
+      "fetched_at": "2026-05-16T07:17:14+00:00",
       "enriched": true
     },
     {
@@ -259,8 +259,8 @@
       "state": "AL",
       "slug": "almobile",
       "id": 1209,
-      "parcel_count": 5601,
-      "fetched_at": "2026-05-02T01:39:01+00:00",
+      "parcel_count": 1205,
+      "fetched_at": "2026-05-16T07:11:46+00:00",
       "enriched": true
     },
     {
@@ -268,27 +268,27 @@
       "state": "AL",
       "slug": "almonroe",
       "id": 1259,
-      "parcel_count": 112,
-      "fetched_at": "2026-05-02T17:58:22+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T06:56:55+00:00",
+      "enriched": false
     },
     {
       "file": "AL-almorgan.json",
       "state": "AL",
       "slug": "almorgan",
       "id": 1261,
-      "parcel_count": 331,
-      "fetched_at": "2026-05-01T15:44:00+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:18:33+00:00",
+      "enriched": false
     },
     {
       "file": "AL-alpike.json",
       "state": "AL",
       "slug": "alpike",
       "id": 1267,
-      "parcel_count": 0,
-      "fetched_at": "2026-05-02T16:20:02+00:00",
-      "enriched": false
+      "parcel_count": 155,
+      "fetched_at": "2026-05-16T07:00:56+00:00",
+      "enriched": true
     },
     {
       "file": "AL-alrandolph.json",
@@ -296,7 +296,7 @@
       "slug": "alrandolph",
       "id": 1274,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T15:08:52+00:00",
+      "fetched_at": "2026-05-16T07:36:03+00:00",
       "enriched": false
     },
     {
@@ -305,7 +305,7 @@
       "slug": "alshelby",
       "id": 1211,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:12:50+00:00",
+      "fetched_at": "2026-05-16T07:46:49+00:00",
       "enriched": false
     },
     {
@@ -313,18 +313,18 @@
       "state": "AL",
       "slug": "alstclair",
       "id": 1260,
-      "parcel_count": 228,
-      "fetched_at": "2026-05-02T19:15:36+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:48:20+00:00",
+      "enriched": false
     },
     {
       "file": "AL-altalladega.json",
       "state": "AL",
       "slug": "altalladega",
       "id": 1217,
-      "parcel_count": 1960,
-      "fetched_at": "2026-05-02T16:48:25+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:13:11+00:00",
+      "enriched": false
     },
     {
       "file": "AL-altallapoosa.json",
@@ -332,7 +332,7 @@
       "slug": "altallapoosa",
       "id": 1257,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:16:14+00:00",
+      "fetched_at": "2026-05-16T07:34:28+00:00",
       "enriched": false
     },
     {
@@ -341,7 +341,7 @@
       "slug": "altuscaloosa",
       "id": 1253,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:09:05+00:00",
+      "fetched_at": "2026-05-16T07:14:37+00:00",
       "enriched": false
     },
     {
@@ -349,18 +349,18 @@
       "state": "AL",
       "slug": "alwalker",
       "id": 1255,
-      "parcel_count": 615,
-      "fetched_at": "2026-05-02T17:22:30+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:26:03+00:00",
+      "enriched": false
     },
     {
       "file": "AL-alwinstin.json",
       "state": "AL",
       "slug": "alwinstin",
       "id": 1307,
-      "parcel_count": 161,
-      "fetched_at": "2026-05-02T19:14:50+00:00",
-      "enriched": true
+      "parcel_count": 0,
+      "fetched_at": "2026-05-16T07:46:19+00:00",
+      "enriched": false
     },
     {
       "file": "AZ-azcochise.json",
@@ -368,7 +368,7 @@
       "slug": "azcochise",
       "id": 1242,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:32:38+00:00",
+      "fetched_at": "2026-05-16T07:33:19+00:00",
       "enriched": false
     },
     {
@@ -377,7 +377,7 @@
       "slug": "cadelnorte",
       "id": 1366,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:48:15+00:00",
+      "fetched_at": "2026-05-16T07:47:06+00:00",
       "enriched": false
     },
     {
@@ -386,7 +386,7 @@
       "slug": "cahumboldt",
       "id": 1314,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:22:13+00:00",
+      "fetched_at": "2026-05-16T07:42:55+00:00",
       "enriched": false
     },
     {
@@ -395,7 +395,7 @@
       "slug": "calake",
       "id": 1440,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:19:14+00:00",
+      "fetched_at": "2026-05-16T06:54:20+00:00",
       "enriched": false
     },
     {
@@ -404,7 +404,7 @@
       "slug": "calosangeles",
       "id": 1391,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:26:32+00:00",
+      "fetched_at": "2026-05-16T07:24:21+00:00",
       "enriched": false
     },
     {
@@ -413,7 +413,7 @@
       "slug": "coalamosatread",
       "id": 1401,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:26:01+00:00",
+      "fetched_at": "2026-05-16T07:45:19+00:00",
       "enriched": false
     },
     {
@@ -422,7 +422,7 @@
       "slug": "cocostillalandsale",
       "id": 1469,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:00:42+00:00",
+      "fetched_at": "2026-05-16T07:48:33+00:00",
       "enriched": false
     },
     {
@@ -431,7 +431,7 @@
       "slug": "cocostillatread",
       "id": 1435,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:21:16+00:00",
+      "fetched_at": "2026-05-16T06:53:39+00:00",
       "enriched": false
     },
     {
@@ -440,7 +440,7 @@
       "slug": "codouglasforeclosure",
       "id": 1400,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:53:38+00:00",
+      "fetched_at": "2026-05-16T07:34:02+00:00",
       "enriched": false
     },
     {
@@ -449,7 +449,7 @@
       "slug": "codouglastread",
       "id": 1479,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T15:05:21+00:00",
+      "fetched_at": "2026-05-16T07:26:21+00:00",
       "enriched": false
     },
     {
@@ -458,7 +458,7 @@
       "slug": "cogarfieldforeclosure",
       "id": 1324,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:57:43+00:00",
+      "fetched_at": "2026-05-16T06:58:16+00:00",
       "enriched": false
     },
     {
@@ -467,7 +467,7 @@
       "slug": "cogarfieldtread",
       "id": 1420,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:46:14+00:00",
+      "fetched_at": "2026-05-16T06:58:55+00:00",
       "enriched": false
     },
     {
@@ -476,7 +476,7 @@
       "slug": "cojeffersonforeclosure",
       "id": 1281,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:50:13+00:00",
+      "fetched_at": "2026-05-16T07:44:07+00:00",
       "enriched": false
     },
     {
@@ -485,7 +485,7 @@
       "slug": "colarimertread",
       "id": 1452,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:13:18+00:00",
+      "fetched_at": "2026-05-16T07:51:27+00:00",
       "enriched": false
     },
     {
@@ -494,7 +494,7 @@
       "slug": "coparkforeclosure",
       "id": 1322,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:59:43+00:00",
+      "fetched_at": "2026-05-16T07:36:29+00:00",
       "enriched": false
     },
     {
@@ -503,7 +503,7 @@
       "slug": "coparktread",
       "id": 1438,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:27:40+00:00",
+      "fetched_at": "2026-05-16T07:20:46+00:00",
       "enriched": false
     },
     {
@@ -512,7 +512,7 @@
       "slug": "copitkinforeclosure",
       "id": 1327,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:11:58+00:00",
+      "fetched_at": "2026-05-16T07:35:43+00:00",
       "enriched": false
     },
     {
@@ -521,7 +521,7 @@
       "slug": "cosaguachetread",
       "id": 1418,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:32:29+00:00",
+      "fetched_at": "2026-05-16T07:40:05+00:00",
       "enriched": false
     },
     {
@@ -530,7 +530,7 @@
       "slug": "cosummitforeclosure",
       "id": 1374,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:33:59+00:00",
+      "fetched_at": "2026-05-16T07:15:17+00:00",
       "enriched": false
     },
     {
@@ -539,7 +539,7 @@
       "slug": "cosummittread",
       "id": 1439,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:48:18+00:00",
+      "fetched_at": "2026-05-16T07:27:27+00:00",
       "enriched": false
     },
     {
@@ -548,7 +548,7 @@
       "slug": "cotellerforeclosure",
       "id": 1419,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:32:52+00:00",
+      "fetched_at": "2026-05-16T07:43:54+00:00",
       "enriched": false
     },
     {
@@ -557,7 +557,7 @@
       "slug": "cotellertread",
       "id": 1489,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:48:46+00:00",
+      "fetched_at": "2026-05-16T07:27:00+00:00",
       "enriched": false
     },
     {
@@ -566,7 +566,7 @@
       "slug": "gaglynn",
       "id": 1208,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:41:27+00:00",
+      "fetched_at": "2026-05-16T07:49:36+00:00",
       "enriched": false
     },
     {
@@ -575,7 +575,7 @@
       "slug": "iacarroll",
       "id": 1502,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T15:00:42+00:00",
+      "fetched_at": "2026-05-16T07:21:08+00:00",
       "enriched": false
     },
     {
@@ -584,7 +584,7 @@
       "slug": "iapolkadjourned",
       "id": 1380,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:48:56+00:00",
+      "fetched_at": "2026-05-16T06:55:19+00:00",
       "enriched": false
     },
     {
@@ -593,7 +593,7 @@
       "slug": "iapoweshiek",
       "id": 1501,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:12:17+00:00",
+      "fetched_at": "2026-05-16T07:12:02+00:00",
       "enriched": false
     },
     {
@@ -602,7 +602,7 @@
       "slug": "inmarion",
       "id": 1282,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:26:59+00:00",
+      "fetched_at": "2026-05-16T07:41:14+00:00",
       "enriched": false
     },
     {
@@ -611,7 +611,7 @@
       "slug": "inmarionnonprofitauction",
       "id": 1319,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:18:35+00:00",
+      "fetched_at": "2026-05-16T07:37:00+00:00",
       "enriched": false
     },
     {
@@ -620,7 +620,7 @@
       "slug": "inmarionsheriff",
       "id": 1375,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:06:36+00:00",
+      "fetched_at": "2026-05-16T06:56:10+00:00",
       "enriched": false
     },
     {
@@ -629,7 +629,7 @@
       "slug": "lacityoffranklin",
       "id": 1506,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:49:42+00:00",
+      "fetched_at": "2026-05-16T07:35:24+00:00",
       "enriched": false
     },
     {
@@ -638,7 +638,7 @@
       "slug": "lacityofmorgancity",
       "id": 1505,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:32:28+00:00",
+      "fetched_at": "2026-05-16T07:21:26+00:00",
       "enriched": false
     },
     {
@@ -647,7 +647,7 @@
       "slug": "lalincoln",
       "id": 1508,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:16:56+00:00",
+      "fetched_at": "2026-05-16T06:59:15+00:00",
       "enriched": false
     },
     {
@@ -656,7 +656,7 @@
       "slug": "lastmary",
       "id": 1504,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:32:03+00:00",
+      "fetched_at": "2026-05-16T07:47:56+00:00",
       "enriched": false
     },
     {
@@ -665,7 +665,7 @@
       "slug": "latensas",
       "id": 1496,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:33:41+00:00",
+      "fetched_at": "2026-05-16T07:36:44+00:00",
       "enriched": false
     },
     {
@@ -674,7 +674,7 @@
       "slug": "launion",
       "id": 1507,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:13:36+00:00",
+      "fetched_at": "2026-05-16T07:49:15+00:00",
       "enriched": false
     },
     {
@@ -683,7 +683,7 @@
       "slug": "amite",
       "id": 1003,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:19:38+00:00",
+      "fetched_at": "2026-05-16T07:22:56+00:00",
       "enriched": false
     },
     {
@@ -692,7 +692,7 @@
       "slug": "msbolivardis1",
       "id": 1006,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:42:28+00:00",
+      "fetched_at": "2026-05-16T07:23:12+00:00",
       "enriched": false
     },
     {
@@ -701,7 +701,7 @@
       "slug": "msbolivardis2",
       "id": 1091,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T14:56:26+00:00",
+      "fetched_at": "2026-05-16T07:17:35+00:00",
       "enriched": false
     },
     {
@@ -710,7 +710,7 @@
       "slug": "mscitywestpoint",
       "id": 1094,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:36:45+00:00",
+      "fetched_at": "2026-05-16T07:22:44+00:00",
       "enriched": false
     },
     {
@@ -719,7 +719,7 @@
       "slug": "mscoahoma",
       "id": 1014,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:36:47+00:00",
+      "fetched_at": "2026-05-16T07:20:13+00:00",
       "enriched": false
     },
     {
@@ -728,7 +728,7 @@
       "slug": "msquitman",
       "id": 1060,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:04:01+00:00",
+      "fetched_at": "2026-05-16T07:43:21+00:00",
       "enriched": false
     },
     {
@@ -737,7 +737,7 @@
       "slug": "mssunflower",
       "id": 1067,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:07:10+00:00",
+      "fetched_at": "2026-05-16T07:12:34+00:00",
       "enriched": false
     },
     {
@@ -746,7 +746,7 @@
       "slug": "mswashington",
       "id": 1076,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T07:49:16+00:00",
+      "fetched_at": "2026-05-16T07:32:32+00:00",
       "enriched": false
     },
     {
@@ -755,7 +755,7 @@
       "slug": "msyalobushadist1",
       "id": 1081,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:46:08+00:00",
+      "fetched_at": "2026-05-16T07:15:02+00:00",
       "enriched": false
     },
     {
@@ -764,7 +764,7 @@
       "slug": "msyalobushadist2",
       "id": 1090,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:58:23+00:00",
+      "fetched_at": "2026-05-16T07:39:41+00:00",
       "enriched": false
     },
     {
@@ -773,7 +773,7 @@
       "slug": "okrogers",
       "id": 1498,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:08:07+00:00",
+      "fetched_at": "2026-05-16T07:23:33+00:00",
       "enriched": false
     },
     {
@@ -782,7 +782,7 @@
       "slug": "palawrencejudicial",
       "id": 1492,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T15:05:58+00:00",
+      "fetched_at": "2026-05-16T07:14:03+00:00",
       "enriched": false
     },
     {
@@ -791,7 +791,7 @@
       "slug": "payorkjudicial",
       "id": 1341,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:22:08+00:00",
+      "fetched_at": "2026-05-16T07:49:02+00:00",
       "enriched": false
     },
     {
@@ -800,7 +800,7 @@
       "slug": "cityofprovidenceri",
       "id": 1510,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:12:04+00:00",
+      "fetched_at": "2026-05-16T07:42:11+00:00",
       "enriched": false
     },
     {
@@ -809,7 +809,7 @@
       "slug": "tncarroll",
       "id": 1493,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:39:13+00:00",
+      "fetched_at": "2026-05-16T07:19:28+00:00",
       "enriched": false
     },
     {
@@ -818,7 +818,7 @@
       "slug": "tncarrollposting",
       "id": 1494,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:03:37+00:00",
+      "fetched_at": "2026-05-16T06:57:08+00:00",
       "enriched": false
     },
     {
@@ -827,7 +827,7 @@
       "slug": "tncarter",
       "id": 1246,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:34:49+00:00",
+      "fetched_at": "2026-05-16T07:13:39+00:00",
       "enriched": false
     },
     {
@@ -836,7 +836,7 @@
       "slug": "tnchesterspeccommissioner",
       "id": 1377,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:11:20+00:00",
+      "fetched_at": "2026-05-16T07:21:58+00:00",
       "enriched": false
     },
     {
@@ -845,7 +845,7 @@
       "slug": "tncumberland",
       "id": 1509,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:59:47+00:00",
+      "fetched_at": "2026-05-16T07:42:29+00:00",
       "enriched": false
     },
     {
@@ -854,7 +854,7 @@
       "slug": "tncumberlandposting",
       "id": 1503,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:36:58+00:00",
+      "fetched_at": "2026-05-16T07:37:50+00:00",
       "enriched": false
     },
     {
@@ -863,7 +863,7 @@
       "slug": "tnhamblenposting",
       "id": 1459,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:38:27+00:00",
+      "fetched_at": "2026-05-16T07:18:59+00:00",
       "enriched": false
     },
     {
@@ -872,7 +872,7 @@
       "slug": "tnhardeman",
       "id": 1207,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:29:58+00:00",
+      "fetched_at": "2026-05-16T07:21:44+00:00",
       "enriched": false
     },
     {
@@ -881,7 +881,7 @@
       "slug": "tnhawkinsposting",
       "id": 1488,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:28:20+00:00",
+      "fetched_at": "2026-05-16T06:57:37+00:00",
       "enriched": false
     },
     {
@@ -890,7 +890,7 @@
       "slug": "tnlawrenceposting",
       "id": 1478,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:12:42+00:00",
+      "fetched_at": "2026-05-16T07:44:37+00:00",
       "enriched": false
     },
     {
@@ -899,7 +899,7 @@
       "slug": "tnmadison",
       "id": 1232,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:11:31+00:00",
+      "fetched_at": "2026-05-16T06:55:08+00:00",
       "enriched": false
     },
     {
@@ -908,7 +908,7 @@
       "slug": "tnmadisonspeccommissioner",
       "id": 1378,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:41:21+00:00",
+      "fetched_at": "2026-05-16T07:40:23+00:00",
       "enriched": false
     },
     {
@@ -917,7 +917,7 @@
       "slug": "tnmadisonsurplus",
       "id": 1421,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:56:39+00:00",
+      "fetched_at": "2026-05-16T07:13:00+00:00",
       "enriched": false
     },
     {
@@ -926,7 +926,7 @@
       "slug": "tnobion",
       "id": 1360,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:52:03+00:00",
+      "fetched_at": "2026-05-16T07:20:56+00:00",
       "enriched": false
     },
     {
@@ -935,7 +935,7 @@
       "slug": "tnrutherfordcitymurfreesboro",
       "id": 1237,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T09:05:13+00:00",
+      "fetched_at": "2026-05-16T07:22:27+00:00",
       "enriched": false
     },
     {
@@ -944,7 +944,7 @@
       "slug": "tnsullivanposting",
       "id": 1480,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:34:02+00:00",
+      "fetched_at": "2026-05-16T06:55:48+00:00",
       "enriched": false
     },
     {
@@ -953,7 +953,7 @@
       "slug": "tnwashington",
       "id": 1243,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:30:48+00:00",
+      "fetched_at": "2026-05-16T07:23:58+00:00",
       "enriched": false
     },
     {
@@ -962,7 +962,7 @@
       "slug": "tnwashingtonposting",
       "id": 1511,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T10:53:36+00:00",
+      "fetched_at": "2026-05-16T07:12:21+00:00",
       "enriched": false
     },
     {
@@ -971,7 +971,7 @@
       "slug": "tnwayneposting",
       "id": 1491,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T08:35:13+00:00",
+      "fetched_at": "2026-05-16T07:14:15+00:00",
       "enriched": false
     },
     {
@@ -980,7 +980,7 @@
       "slug": "txdenton",
       "id": 1355,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T16:33:06+00:00",
+      "fetched_at": "2026-05-16T07:37:14+00:00",
       "enriched": false
     },
     {
@@ -989,7 +989,7 @@
       "slug": "txgrayson",
       "id": 1280,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T12:36:46+00:00",
+      "fetched_at": "2026-05-16T06:58:37+00:00",
       "enriched": false
     },
     {
@@ -998,7 +998,7 @@
       "slug": "txmclennan",
       "id": 1444,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T13:54:38+00:00",
+      "fetched_at": "2026-05-16T06:54:38+00:00",
       "enriched": false
     },
     {
@@ -1007,7 +1007,7 @@
       "slug": "wacolumbia",
       "id": 1397,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T15:48:28+00:00",
+      "fetched_at": "2026-05-16T07:45:36+00:00",
       "enriched": false
     },
     {
@@ -1016,7 +1016,7 @@
       "slug": "wacolumbiasurplus",
       "id": 1457,
       "parcel_count": 0,
-      "fetched_at": "2026-05-01T11:45:49+00:00",
+      "fetched_at": "2026-05-16T07:19:58+00:00",
       "enriched": false
     }
   ]
