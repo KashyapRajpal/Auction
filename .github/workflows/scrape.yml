@@ -39,6 +39,9 @@ jobs:
             exit $rc
           fi
 
+      - name: Scrape multi-source platforms
+        run: python src/scrape.py multi
+
       - name: Commit refreshed snapshots
         run: |
           git config user.name  'github-actions[bot]'

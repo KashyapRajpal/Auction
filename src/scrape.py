@@ -22,11 +22,15 @@ import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
+from bid4assets import scrape_active_county_sales
+from canada_municipal import parse_municipal_sales_page
 from govease import (
     fetch_counties, fetch_list_page, parse_list_grid,
     fetch_detail, parse_detail, fetch_shape,
     session, polite_sleep,
 )
+from realauction import scrape_county_from_internal_endpoints
+from unified_schema import snapshot_filename, validate_snapshot_item
 
 # requests.Session is not thread-safe at the .request() level — give each
 # worker thread its own session via thread-local storage.
@@ -49,14 +53,19 @@ MANIFEST_FILE = os.path.join(DATA_DIR, 'manifest.json')
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec='seconds')
 
+def _atomic_write_json(path: str, payload: dict) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = f"{path}.tmp"
+    with open(tmp, 'w') as f:
+        json.dump(payload, f, indent=2)
+    os.replace(tmp, path)
+
 
 # ── counties ──────────────────────────────────────────────────────────────────
 def cmd_counties() -> None:
     counties = fetch_counties(session())
     payload = {'fetched_at': _now(), 'count': len(counties), 'counties': counties}
-    os.makedirs(DATA_DIR, exist_ok=True)
-    with open(COUNTIES_FILE, 'w') as f:
-        json.dump(payload, f, indent=2)
+    _atomic_write_json(COUNTIES_FILE, payload)
     print(f"✓ {len(counties)} counties → {COUNTIES_FILE}")
 
 
@@ -169,8 +178,7 @@ def cmd_reshape(state: str, slug: str, county_id: int, *, workers: int = 4) -> N
     print(f"[{state}/{slug}/{county_id}] re-shaping {len(todo)}/{len(parcels)} parcels…")
     _parallel_shapes(todo, state, slug, workers)
     snap['fetched_at'] = _now()
-    with open(fn, 'w') as f:
-        json.dump(snap, f, indent=2)
+    _atomic_write_json(fn, snap)
     hits = sum(1 for p in todo if p.get('lat') is not None)
     print(f"✓ {hits}/{len(todo)} re-shaped → {fn}")
     rebuild_manifest()
@@ -182,10 +190,8 @@ def cmd_county(state: str, slug: str, county_id: int, *,
     snap = scrape_county(state, slug, county_id,
                          fetch_details=not no_details,
                          geocode=not no_geocode, limit=limit, workers=workers)
-    os.makedirs(SNAPSHOT_DIR, exist_ok=True)
     out = os.path.join(SNAPSHOT_DIR, f"{state}-{slug}.json")
-    with open(out, 'w') as f:
-        json.dump(snap, f, indent=2)
+    _atomic_write_json(out, snap)
     print(f"✓ {snap['parcel_count']} parcels → {out}")
     rebuild_manifest()
 
@@ -195,12 +201,17 @@ def rebuild_manifest() -> None:
     if not os.path.exists(SNAPSHOT_DIR):
         return
     entries = []
-    for fn in sorted(os.listdir(SNAPSHOT_DIR)):
+    for root, _, files in os.walk(SNAPSHOT_DIR):
+      for fn in sorted(files):
         if not fn.endswith('.json'):
             continue
+        fp = os.path.join(root, fn)
+        rel = os.path.relpath(fp, SNAPSHOT_DIR).replace(os.sep, '/')
         try:
-            d = json.load(open(os.path.join(SNAPSHOT_DIR, fn)))
+            d = json.load(open(fp))
         except Exception:
+            continue
+        if not isinstance(d, dict) or not isinstance(d.get('county'), dict):
             continue
         c = d.get('county', {})
         # Detect enrichment level by sampling the first parcel.
@@ -208,7 +219,7 @@ def rebuild_manifest() -> None:
         enriched = bool(sample and (sample.get('lat') is not None
                                     or sample.get('true_value') is not None))
         entries.append({
-            'file':         fn,
+            'file':         rel,
             'state':        c.get('state'),
             'slug':         c.get('slug'),
             'id':           c.get('id'),
@@ -216,10 +227,103 @@ def rebuild_manifest() -> None:
             'fetched_at':   d.get('fetched_at'),
             'enriched':     enriched,
         })
-    with open(MANIFEST_FILE, 'w') as f:
-        json.dump({'updated_at': _now(), 'count': len(entries), 'snapshots': entries},
-                  f, indent=2)
+    _atomic_write_json(MANIFEST_FILE, {'updated_at': _now(), 'count': len(entries), 'snapshots': entries})
     print(f"  manifest: {len(entries)} snapshots → {MANIFEST_FILE}")
+
+
+def _write_unified_snapshot(country: str, state: str, county: str, items: list[dict]) -> None:
+    for item in items:
+        validate_snapshot_item(item)
+    out = os.path.join(SNAPSHOT_DIR, snapshot_filename(country, state, county))
+    payload = {
+        'fetched_at': _now(),
+        'source': f'{country}-{state}-{county}',
+        'count': len(items),
+        'items': items,
+    }
+    _atomic_write_json(out, payload)
+    print(f"✓ {len(items)} unified rows → {out}")
+
+
+def cmd_multi() -> None:
+    changed = False
+
+    bid4assets_sources = [
+        {
+            'state': 'CA',
+            'county_city': 'Los Angeles',
+            'urls': ['https://www.bid4assets.com/sales/index.cfm?partnerstateid=5'],
+        },
+        {
+            'state': 'WA',
+            'county_city': 'King',
+            'urls': ['https://www.bid4assets.com/sales/index.cfm?partnerstateid=49'],
+        },
+    ]
+    for src in bid4assets_sources:
+        try:
+            items = scrape_active_county_sales(src['urls'], state=src['state'], county_city=src['county_city'])
+            if items:
+                _write_unified_snapshot('US', src['state'], src['county_city'], items)
+                changed = True
+        except Exception as e:
+            print(f"[warn] Bid4Assets {src['state']}/{src['county_city']} failed: {e}")
+
+    realauction_sources = [
+        {
+            'state': 'FL',
+            'county_city': 'Miami-Dade',
+            'endpoints': ['https://www.realauction.com/api/listings?county=miami-dade'],
+        },
+        {
+            'state': 'AZ',
+            'county_city': 'Maricopa',
+            'endpoints': ['https://www.realauction.com/api/listings?county=maricopa'],
+        },
+    ]
+    for src in realauction_sources:
+        try:
+            items = scrape_county_from_internal_endpoints(src['endpoints'], state=src['state'], county_city=src['county_city'])
+            if items:
+                _write_unified_snapshot('US', src['state'], src['county_city'], items)
+                changed = True
+        except Exception as e:
+            print(f"[warn] Realauction {src['state']}/{src['county_city']} failed: {e}")
+
+    canada_sources = [
+        {
+            'platform': 'Calgary_Gov',
+            'province': 'AB',
+            'county_city': 'Calgary',
+            'url': 'https://www.calgary.ca/taxes/property-tax/tax-sale.html',
+        },
+        {
+            'platform': 'Toronto_Gov',
+            'province': 'ON',
+            'county_city': 'Toronto',
+            'url': 'https://www.toronto.ca/services-payments/property-taxes-utilities/property-tax/tax-sales/',
+        },
+    ]
+    s = session()
+    for src in canada_sources:
+        try:
+            r = s.get(src['url'], timeout=30)
+            r.raise_for_status()
+            items = parse_municipal_sales_page(
+                r.text,
+                source_platform=src['platform'],
+                province=src['province'],
+                county_city=src['county_city'],
+                source_url=src['url'],
+            )
+            if items:
+                _write_unified_snapshot('CA', src['province'], src['county_city'], items)
+                changed = True
+        except Exception as e:
+            print(f"[warn] Canada municipal {src['province']}/{src['county_city']} failed: {e}")
+
+    if changed:
+        rebuild_manifest()
 
 
 # ── all-counties (CI & service.py both call this) ─────────────────────────────
@@ -256,6 +360,8 @@ def main(argv: list[str]) -> int:
     pa.add_argument('--limit', type=int, default=None)
     pa.add_argument('--workers', type=int, default=4)
 
+    sub.add_parser('multi', help='scrape Bid4Assets, Realauction, and Canadian municipal sources')
+
     pr = sub.add_parser('reshape', help='re-run shape API on parcels missing lat/lng')
     pr.add_argument('state'); pr.add_argument('slug'); pr.add_argument('county_id', type=int)
     pr.add_argument('--workers', type=int, default=4)
@@ -270,6 +376,8 @@ def main(argv: list[str]) -> int:
     elif args.cmd == 'all':
         cmd_all(no_details=args.no_details, no_geocode=args.no_geocode,
                 limit=args.limit, workers=args.workers)
+    elif args.cmd == 'multi':
+        cmd_multi()
     elif args.cmd == 'reshape':
         cmd_reshape(args.state.upper(), args.slug, args.county_id, workers=args.workers)
     return 0

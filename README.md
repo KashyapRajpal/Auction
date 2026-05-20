@@ -1,8 +1,8 @@
 # Auction Dashboard
 
-A Zillow-style browser for US tax-lien and tax-deed auctions, sourced from
-[GovEase](https://liveauctions.govease.com) — 113 counties across AL, AZ, CA,
-CO, GA, IA, IN, LA, MS, OK, PA, RI, TN, TX, and WA.
+A Zillow-style browser for tax-lien and tax-deed auctions. The existing UI is
+driven by GovEase snapshots, and the scraper pipeline now also emits unified
+static snapshots for Bid4Assets, Realauction, and Canadian municipal portals.
 
 The dashboard is a static HTML page with no backend. The scraper writes
 per-county JSON snapshots into `data/snapshots/`; the page reads them as static
@@ -29,6 +29,11 @@ and commits any updated snapshots. User clicks never write artifacts.
 ├── docs/
 │   └── notes.md                ← data-source reference
 ├── .github/workflows/scrape.yml ← scheduled scrape every 15 days
+│   ├── bid4assets.py            ← Bid4Assets parser + anti-bot wrapper fallback
+│   ├── realauction.py           ← Realauction internal JSON parser
+│   ├── canada_municipal.py      ← Canada municipal tax-sale parser
+│   └── unified_schema.py        ← Unified snapshot schema + validator helpers
+├── tests/                       ← parser/schema unit tests with static fixtures
 └── README.md
 ```
 
@@ -61,10 +66,14 @@ python src/scrape.py county AL albarbour 1262 --no-details --no-geocode
 
 # Scrape every county in counties.json (long; for CI / overnight runs)
 python src/scrape.py all
+
+# Multi-source expansion snapshot run (Bid4Assets / Realauction / Canada)
+python src/scrape.py multi
 ```
 
-Each county scrape writes `data/snapshots/{STATE}-{slug}.json` and updates
-`data/manifest.json` so the dashboard knows the county now has data.
+GovEase county scrapes write `data/snapshots/{STATE}-{slug}.json`.
+Unified multi-source runs write `data/snapshots/{COUNTRY}_{STATE}_{COUNTY}.json`.
+`data/manifest.json` now discovers GovEase county snapshots recursively.
 
 ### 3. View the dashboard
 

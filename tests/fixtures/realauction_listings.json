@@ -1,0 +1,19 @@
+{
+  "listings": [
+    {
+      "apn": "FL-APN-100",
+      "minimum_bid": "3250",
+      "sale_type": "Tax Deed",
+      "end_time": "2026-06-20 13:00",
+      "legal_description": "LOT 7 BLOCK 4",
+      "url": "https://example.realauction.com/listings/FL-APN-100"
+    },
+    {
+      "parcel_id": "FL-CERT-200",
+      "certificate_amount": 1250.5,
+      "auction_type": "Tax Lien Certificate",
+      "auction_end_utc": "2026-06-21T14:15:00Z",
+      "property_url": "https://example.realauction.com/listings/FL-CERT-200"
+    }
+  ]
+}

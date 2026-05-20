@@ -72,3 +72,21 @@ The scraper imitates a polite human:
 
 A full sweep across all 113 counties takes hours-to-days. Use `service.py` for
 long runs — it saves state per-county and is safe to kill.
+
+## Bid4Assets
+
+Multi-source scraper support parses active property cards and normalizes APN,
+minimum bid, close date, legal text, and property URL into unified snapshots.
+The parser supports a headless-wrapper path (Playwright when available) with a
+minimum 1.5s delay between list pages.
+
+## Realauction
+
+Parser consumes internal JSON payloads from county listing endpoints (when
+available), then maps sale type / opening bid / date fields into the unified
+schema for tax lien and tax deed records.
+
+## Canada Municipal Portals
+
+Static municipal tax-sale pages (e.g., Calgary, Toronto) are parsed from HTML
+tables/announcement rows and normalized with `country=CA` and `currency=CAD`.
