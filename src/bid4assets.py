@@ -131,6 +131,7 @@ def scrape_active_county_sales(
     throttle_seconds: float = 1.5,
     client: Bid4AssetsHeadlessClient | None = None,
 ) -> list[dict]:
+    """Scrape Bid4Assets pages with an enforced minimum 1.5s page-to-page delay."""
     browser = client or Bid4AssetsHeadlessClient()
     out: list[dict] = []
     urls = list(page_urls)

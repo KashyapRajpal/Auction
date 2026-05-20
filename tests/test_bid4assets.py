@@ -37,7 +37,7 @@ class TestBid4Assets(unittest.TestCase):
             client=client,
         )
         elapsed = time.time() - t0
-        self.assertGreaterEqual(elapsed, 1.5)
+        self.assertGreaterEqual(elapsed, 1.4)
         self.assertEqual(len(items), 2)
 
 

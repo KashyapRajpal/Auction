@@ -202,31 +202,32 @@ def rebuild_manifest() -> None:
         return
     entries = []
     for root, _, files in os.walk(SNAPSHOT_DIR):
-      for fn in sorted(files):
-        if not fn.endswith('.json'):
-            continue
-        fp = os.path.join(root, fn)
-        rel = os.path.relpath(fp, SNAPSHOT_DIR).replace(os.sep, '/')
-        try:
-            d = json.load(open(fp))
-        except Exception:
-            continue
-        if not isinstance(d, dict) or not isinstance(d.get('county'), dict):
-            continue
-        c = d.get('county', {})
-        # Detect enrichment level by sampling the first parcel.
-        sample = (d.get('parcels') or [None])[0]
-        enriched = bool(sample and (sample.get('lat') is not None
-                                    or sample.get('true_value') is not None))
-        entries.append({
-            'file':         rel,
-            'state':        c.get('state'),
-            'slug':         c.get('slug'),
-            'id':           c.get('id'),
-            'parcel_count': d.get('parcel_count', 0),
-            'fetched_at':   d.get('fetched_at'),
-            'enriched':     enriched,
-        })
+        for fn in sorted(files):
+            if not fn.endswith('.json'):
+                continue
+            fp = os.path.join(root, fn)
+            rel = os.path.relpath(fp, SNAPSHOT_DIR).replace(os.sep, '/')
+            try:
+                with open(fp) as f:
+                    d = json.load(f)
+            except Exception:
+                continue
+            if not isinstance(d, dict) or not isinstance(d.get('county'), dict):
+                continue
+            c = d.get('county', {})
+            # Detect enrichment level by sampling the first parcel.
+            sample = (d.get('parcels') or [None])[0]
+            enriched = bool(sample and (sample.get('lat') is not None
+                                        or sample.get('true_value') is not None))
+            entries.append({
+                'file':         rel,
+                'state':        c.get('state'),
+                'slug':         c.get('slug'),
+                'id':           c.get('id'),
+                'parcel_count': d.get('parcel_count', 0),
+                'fetched_at':   d.get('fetched_at'),
+                'enriched':     enriched,
+            })
     _atomic_write_json(MANIFEST_FILE, {'updated_at': _now(), 'count': len(entries), 'snapshots': entries})
     print(f"  manifest: {len(entries)} snapshots → {MANIFEST_FILE}")
 
