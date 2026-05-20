@@ -91,7 +91,7 @@ def parse_listing_page(html: str, *, state: str, county_city: str, page_url: str
     rows: list[dict] = []
     for card in CARD_RE.findall(html or ''):
         cleaned = _clean(card)
-        apn = (APN_RE.search(cleaned) or APN_RE.search(card or ''))
+        apn = APN_RE.search(card or '')
         bid = (BID_RE.search(cleaned) or BID_RE.search(card or ''))
         end = (END_RE.search(cleaned) or END_RE.search(card or ''))
         legal = (LEGAL_RE.search(cleaned) or LEGAL_RE.search(card or ''))

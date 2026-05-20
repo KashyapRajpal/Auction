@@ -1,16 +1,18 @@
 import os
 import sys
 import unittest
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'src'))
+FIXTURES = Path(ROOT) / 'tests' / 'fixtures'
 
 from canada_municipal import parse_municipal_sales_page
 
 
 class TestCanadaMunicipal(unittest.TestCase):
     def test_parse_municipal_sales_page(self):
-        html = open(os.path.join(ROOT, 'tests/fixtures/calgary_tax_sales.html')).read()
+        html = (FIXTURES / 'calgary_tax_sales.html').read_text()
         items = parse_municipal_sales_page(
             html,
             source_platform='Calgary_Gov',

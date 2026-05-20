@@ -2,17 +2,19 @@ import os
 import sys
 import time
 import unittest
+from pathlib import Path
 from unittest.mock import MagicMock
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'src'))
+FIXTURES = Path(ROOT) / 'tests' / 'fixtures'
 
 from bid4assets import parse_listing_page, scrape_active_county_sales
 
 
 class TestBid4Assets(unittest.TestCase):
     def test_parse_listing_page_normalizes_schema(self):
-        html = open(os.path.join(ROOT, 'tests/fixtures/bid4assets_page1.html')).read()
+        html = (FIXTURES / 'bid4assets_page1.html').read_text()
         items = parse_listing_page(html, state='CA', county_city='Los Angeles', page_url='https://example.com/page1')
         self.assertEqual(len(items), 1)
         item = items[0]
@@ -23,7 +25,7 @@ class TestBid4Assets(unittest.TestCase):
         self.assertEqual(item['country'], 'US')
 
     def test_scrape_respects_minimum_throttle(self):
-        html = open(os.path.join(ROOT, 'tests/fixtures/bid4assets_page1.html')).read()
+        html = (FIXTURES / 'bid4assets_page1.html').read_text()
         client = MagicMock()
         client.get.side_effect = [html, html]
         t0 = time.time()

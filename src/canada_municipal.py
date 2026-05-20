@@ -57,6 +57,8 @@ def parse_municipal_sales_page(
             continue
 
         parcel_id = cells[0]
+        if parcel_id.lower() in {'roll', 'roll number', 'parcel id', 'property id'}:
+            continue
         opening_bid = _money(cells[1])
         auction_date = _to_utc(cells[2])
         legal = cells[3] if len(cells) > 3 else ''
